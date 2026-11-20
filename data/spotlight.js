@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-20T10:10:56.711Z",
+  "updated": "2026-11-20T13:18:14.744Z",
   "week": "20 November 2026",
   "picks": [
     {
@@ -41,19 +41,19 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "Gulf plans to expand filling station network to Tashkent under new memorandum",
-        "src": "Kun.uz",
-        "u": "https://kun.uz/en/news/2026/11/20/gulf-plans-to-expand-filling-station-network-to-tashkent-under-new-memorandum-61544",
-        "n": 3,
-        "term": "Expand"
+        "t": "Over 400 family polyclinics to be modernized in Samarkand region with World Bank support",
+        "src": "Gazeta.uz",
+        "u": "https://www.gazeta.uz/en/2026/11/18/shifo-1/",
+        "n": 4,
+        "term": "Bank"
       },
       "quiet": {
-        "t": "Uzbekistan's exports reach $25.7bn in 10M26, up 33%",
-        "src": "Daryo",
-        "u": "https://daryo.uz/en/2026/11/20/uzbekistans-exports-reach-25-7bn-in-10m26-up-33/"
+        "t": "Tajikistan’s Trade Deficit Widens 53% as Imports Surge",
+        "src": "Times of Central Asia",
+        "u": "https://timesca.com/tajikistans-trade-deficit-widens-53-as-imports-surge/"
       },
-      "why": "In Uzbekistan and Central Asia, Expand is the story most outlets are running (3 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
-      "whyGz": "Back home, everyone's covering Expand. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
+      "why": "In Uzbekistan and Central Asia, Bank is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
+      "whyGz": "Back home, everyone's covering Bank. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
       "topic": "trade"
     }
   ]
