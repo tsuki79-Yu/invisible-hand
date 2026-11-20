@@ -102,26 +102,50 @@
   function maxX() { return Math.max(16, window.innerWidth - width() - 16); }
   var faceTimer = 0;
   function face(dir) { clearTimeout(faceTimer); if (dir) yu.dataset.face = dir; else delete yu.dataset.face; }
+  function setX(v) { yu.style.setProperty('--yu-x', v.toFixed(1) + 'px'); }
+  var walkLoop = 0;
+  function stopWalk() { cancelAnimationFrame(walkLoop); walkLoop = 0; }
+  function endWalk() {
+    stopWalk();
+    yu.classList.remove('walking');
+    ['--rock', '--bob', '--lift-l', '--lift-r', '--tilt'].forEach(function (v) { yu.style.removeProperty(v); });
+    positionBubble();
+    faceTimer = setTimeout(function () { face(''); }, 700); // turn back to face you
+  }
+  // A penguin walk: she only moves forward while a foot is stepping, and rocks over each foot.
+  function startWalk(target, dir) {
+    stopWalk();
+    var STEP_MS = 440, STRIDE = 9;                     // ~20 px a second: calm
+    var startX = x, total = Math.abs(target - startX);
+    var steps = Math.max(1, Math.round(total / STRIDE)), stride = total / steps, t0 = performance.now();
+    yu.style.transitionDuration = '0s';
+    yu.classList.add('walking');
+    function frame(now) {
+      var t = (now - t0) / STEP_MS, n = Math.floor(t), p = t - n;
+      if (n >= steps) { x = target; setX(x); endWalk(); return; }
+      var ease = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;  // each step speeds up then settles
+      x = startX + dir * stride * (n + ease); setX(x);
+      var side = n % 2 === 0 ? 1 : -1, arc = Math.sin(p * Math.PI);  // which foot, and how high in the step
+      yu.style.setProperty('--rock', (side * 6 * arc).toFixed(2) + 'deg');   // waddle over the standing foot
+      yu.style.setProperty('--bob', (-2.6 * arc).toFixed(2) + 'px');
+      yu.style.setProperty('--lift-l', (side > 0 ? -3.4 * arc : 0).toFixed(2) + 'px');
+      yu.style.setProperty('--lift-r', (side < 0 ? -3.4 * arc : 0).toFixed(2) + 'px');
+      positionBubble();
+      walkLoop = requestAnimationFrame(frame);
+    }
+    walkLoop = requestAnimationFrame(frame);
+  }
   function place(nx, animate) {
     nx = Math.max(16, Math.min(maxX(), nx));
     var dist = Math.abs(nx - x);
-    if (!animate || reduce || dist < 4) {
-      yu.style.transitionDuration = '0s'; x = nx; yu.style.setProperty('--yu-x', x + 'px'); positionBubble(); return;
-    }
-    var dur = Math.min(9, dist / 32);   // a slow, calm waddle
-    face(nx < x ? 'left' : 'right');     // turn toward where she is going (3D turn)
     clearTimeout(walkTimer);
-    walkTimer = setTimeout(function () {
-      yu.classList.add('walking');
-      yu.style.transitionDuration = dur + 's';
-      x = nx; yu.style.setProperty('--yu-x', x + 'px');
-      walkTimer = setTimeout(function () {
-        yu.classList.remove('walking'); positionBubble();
-        faceTimer = setTimeout(function () { face(''); }, 700); // then turn back to face you
-      }, dur * 1000);
-      var start = Date.now();
-      (function follow() { positionBubble(); if (Date.now() - start < dur * 1000) requestAnimationFrame(follow); })();
-    }, 350);                             // turn first, then start walking
+    if (!animate || reduce || dist < 4) {
+      stopWalk(); yu.classList.remove('walking');
+      yu.style.transitionDuration = '0s'; x = nx; setX(x); positionBubble(); return;
+    }
+    var dir = nx < x ? -1 : 1;
+    face(dir < 0 ? 'left' : 'right');                 // turn toward where she is going first (3D turn)
+    walkTimer = setTimeout(function () { startWalk(nx, dir); }, 420);
     lastWalk = Date.now();
   }
   function home() { return maxX(); }

@@ -23,11 +23,11 @@
 #yu:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 18px; }
 #yu .yu-flipwrap { width: 100%; height: 100%; transition: transform .55s cubic-bezier(.3,.7,.3,1); transform: perspective(260px) rotateY(0deg); }
 /* 3D turn: she rotates toward where she walks, then turns back to face you */
-#yu[data-face="right"] .yu-flipwrap { transform: perspective(260px) rotateY(24deg); }
-#yu[data-face="left"] .yu-flipwrap { transform: perspective(260px) rotateY(-24deg); }
+#yu[data-face="right"] .yu-flipwrap { transform: perspective(240px) rotateY(34deg); }
+#yu[data-face="left"] .yu-flipwrap { transform: perspective(240px) rotateY(-34deg); }
 #yu .yu-face { transform-box: view-box; transition: transform .55s cubic-bezier(.3,.7,.3,1); }
-#yu[data-face="right"] .yu-face { transform: translateX(3.5px); }
-#yu[data-face="left"] .yu-face { transform: translateX(-3.5px); }
+#yu[data-face="right"] .yu-face { transform: translateX(5px); }
+#yu[data-face="left"] .yu-face { transform: translateX(-5px); }
 #yu .yu-look { transform: translate(var(--lx, 0px), var(--ly, 0px)); transition: transform .35s ease-out; }
 #yu[data-face="right"] .yu-look { transform: translate(1.6px, 0); }
 #yu[data-face="left"] .yu-look { transform: translate(-1.6px, 0); }
@@ -82,10 +82,15 @@
 
 /* walking */
 /* calm waddle: small bob and sway, feet take turns */
-#yu.walking .yu-body { animation: yu-step .55s ease-in-out infinite alternate; }
-#yu.walking .yu-foot-l { animation: yu-foot .55s ease-in-out infinite alternate; }
-#yu.walking .yu-foot-r { animation: yu-foot .55s ease-in-out infinite alternate-reverse; }
-#yu.walking .yu-shadowel { animation: yu-shadow .55s ease-in-out infinite alternate; }
+#yu.walking .yu-body { animation: none; transform: translateY(var(--bob, 0px)) rotate(var(--rock, 0deg)); }
+#yu.walking .yu-foot-l { transform: translateY(var(--lift-l, 0px)); }
+#yu.walking .yu-foot-r { transform: translateY(var(--lift-r, 0px)); }
+/* the far flipper tucks behind her body when she turns, the near one swings: depth */
+#yu .yu-flip-l, #yu .yu-flip-r { transition: transform .45s ease, opacity .45s ease; }
+#yu[data-face="right"]:not([data-pose="read"]):not([data-pose="paper"]):not([data-pose="popcorn"]):not([data-pose="letter"]) .yu-flip-l { transform: translateX(6px) scale(.7, .9); opacity: .85; }
+#yu[data-face="left"]:not([data-pose="read"]):not([data-pose="paper"]):not([data-pose="popcorn"]):not([data-pose="letter"]) .yu-flip-r { transform: translateX(-6px) scale(.7, .9); opacity: .85; }
+#yu.walking[data-face="right"] .yu-flip-r { transform: rotate(calc(var(--rock, 0deg) * -2.5)); }
+#yu.walking[data-face="left"] .yu-flip-l { transform: rotate(calc(var(--rock, 0deg) * -2.5)); }
 @keyframes yu-step { 0% { transform: translateY(0) rotate(-2.5deg); } 50% { transform: translateY(-2.2px) rotate(0deg); } 100% { transform: translateY(0) rotate(2.5deg); } }
 @keyframes yu-foot { from { transform: translateY(0); } to { transform: translateY(-2.6px); } }
 @keyframes yu-shadow { from { transform: scaleX(1); } to { transform: scaleX(.92); } }
