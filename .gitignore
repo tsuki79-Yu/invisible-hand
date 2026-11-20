@@ -1,0 +1,6 @@
+# Local-only files (not part of the website)
+.claude/
+preview.html
+node_modules/
+.DS_Store
+Thumbs.db

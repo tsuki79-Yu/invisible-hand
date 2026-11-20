@@ -1,0 +1,36 @@
+# Keeps Invisible Hand fresh for free:
+# - news headlines every 3 hours
+# - World Bank country data once a day
+name: Update data
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"   # news
+    - cron: "40 2 * * *"     # country data
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch news headlines
+        run: node scripts/fetch-news.mjs
+      - name: Pick "Worth your attention"
+        run: node scripts/make-spotlight.mjs
+      - name: Fetch World Bank data (once a day)
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '40 2 * * *'
+        run: node scripts/fetch-countries.mjs
+      - name: Save changes
+        run: |
+          git config user.name "invisible-hand-bot"
+          git config user.email "invisible-hand-bot@users.noreply.github.com"
+          git add data/news.js data/countries.js data/spotlight.js
+          git diff --cached --quiet || git commit -m "Update news and data"
+          git push

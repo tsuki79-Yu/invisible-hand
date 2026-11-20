@@ -1,0 +1,184 @@
+/* Yu, the study-buddy penguin. Walks along the bottom of the screen, reads along, gives tours and reminders. */
+:root {
+  --yu-dark: #1e2b30;
+  --yu-belly: #fbf8f0;
+  --yu-gold: #e3a535;
+  --yu-blush: #f0a49a;
+  --yu-outline: rgba(30, 43, 48, 0);
+  --yu-paper: #fffdf6;
+  --yu-shadow: rgba(19, 33, 28, .16);
+  --yu-dim: rgba(10, 20, 17, .45);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --yu-outline: rgba(214, 232, 224, .6); --yu-shadow: rgba(0, 0, 0, .45); --yu-dim: rgba(0, 0, 0, .6); }
+}
+:root[data-theme="dark"] { --yu-outline: rgba(214, 232, 224, .6); --yu-shadow: rgba(0, 0, 0, .45); --yu-dim: rgba(0, 0, 0, .6); }
+
+#yu {
+  position: fixed; left: 0; bottom: calc(8px + env(safe-area-inset-bottom, 0px)); z-index: 47;
+  width: 76px; height: 84px; padding: 0; border: 0; background: none; cursor: pointer;
+  transform: translateX(var(--yu-x, 0px)); transition-property: transform; transition-timing-function: linear;
+  -webkit-tap-highlight-color: transparent;
+}
+#yu:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 18px; }
+#yu .yu-flipwrap { width: 100%; height: 100%; transition: transform .25s; }
+#yu.face-left .yu-flipwrap { transform: scaleX(-1); }
+#yu svg { width: 100%; height: 100%; overflow: visible; display: block; }
+.yu-dark { fill: var(--yu-dark); stroke: var(--yu-outline); stroke-width: 1.2; }
+.yu-belly { fill: var(--yu-belly); }
+.yu-gold { fill: var(--yu-gold); }
+.yu-blush { fill: var(--yu-blush); opacity: .55; }
+.yu-scarf { fill: var(--note); }
+.yu-scarf-stripe { fill: var(--gold); }
+.yu-pupil { fill: #14191b; }
+.yu-shine { fill: #fff; }
+.yu-shadowel { fill: var(--yu-shadow); }
+.yu-paperfill { fill: var(--yu-paper); stroke: #c9c2ad; stroke-width: .8; }
+.yu-ink { fill: #3c4a45; }
+.yu-cover { fill: var(--note); }
+.yu-text { fill: var(--muted); font: 700 13px var(--f-data, monospace); }
+.yu-qmark { fill: var(--gold); font: 800 18px var(--f-display, sans-serif); }
+
+/* parts that animate */
+#yu .yu-body, #yu .yu-eyes, #yu .yu-pupils, #yu .yu-flip-l, #yu .yu-flip-r, #yu .yu-page, #yu .yu-zz text, #yu .yu-spark { transform-box: fill-box; }
+#yu .yu-body { transform-origin: 50% 100%; animation: yu-bob 3.2s ease-in-out infinite; }
+#yu .yu-eyes { transform-origin: center; animation: yu-blink 5s infinite; }
+#yu .yu-flip-l { transform-origin: 80% 15%; transition: transform .3s; }
+#yu .yu-flip-r { transform-origin: 20% 15%; transition: transform .3s; }
+#yu .yu-prop, #yu .yu-zz, #yu .yu-spark, #yu .yu-think { opacity: 0; transition: opacity .25s; }
+
+@keyframes yu-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
+@keyframes yu-blink { 0%, 93%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
+@keyframes yu-waddle { from { transform: rotate(-7deg); } to { transform: rotate(7deg); } }
+@keyframes yu-wave { 0%, 100% { transform: rotate(0); } 25%, 75% { transform: rotate(-55deg); } 50% { transform: rotate(-30deg); } }
+@keyframes yu-read { 0%, 40% { transform: translateX(-1.8px); } 50%, 90% { transform: translateX(1.8px); } 100% { transform: translateX(-1.8px); } }
+@keyframes yu-flip { 0% { transform: scaleX(1); } 50% { transform: scaleX(0); } 100% { transform: scaleX(-1); } }
+@keyframes yu-hop { 0%, 100% { transform: translateY(0); } 30% { transform: translateY(-14px); } 55% { transform: translateY(0); } 75% { transform: translateY(-6px); } }
+@keyframes yu-z { 0% { transform: translate(0, 0); opacity: 0; } 30% { opacity: 1; } 100% { transform: translate(8px, -16px); opacity: 0; } }
+@keyframes yu-twinkle { 0%, 100% { transform: scale(.4); opacity: 0; } 50% { transform: scale(1); opacity: 1; } }
+@keyframes yu-attn { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+.yu-arc { fill: none; stroke: #14191b; stroke-width: 2.6; stroke-linecap: round; }
+#yu .yu-happy { opacity: 0; }
+#yu .yu-tuft { transform-box: fill-box; transform-origin: 30% 100%; animation: yu-sway 4.5s ease-in-out infinite; }
+@keyframes yu-sway { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(8deg); } }
+@keyframes yu-boing { 0% { transform: scale(1, 1); } 30% { transform: scale(1.1, .88); } 55% { transform: scale(.94, 1.08); } 75% { transform: scale(1.03, .97); } 100% { transform: scale(1, 1); } }
+#yu.boing .yu-flipwrap { transform-origin: 50% 100%; animation: yu-boing .5s ease-out 1; }
+#yu[data-pose="cheer"] .yu-happy, #yu[data-pose="wave"] .yu-happy { opacity: 1; }
+#yu[data-pose="cheer"] .yu-eyes, #yu[data-pose="wave"] .yu-eyes { opacity: 0; }
+#yu[data-pose="sleep"] .yu-tuft { animation: none; transform: rotate(-30deg); }
+
+/* walking */
+#yu.walking .yu-body { animation: yu-waddle .32s ease-in-out infinite alternate; }
+
+/* poses */
+#yu[data-pose="wave"] .yu-flip-r { animation: yu-wave 1.1s ease-in-out 1; }
+#yu[data-pose="read"] .yu-book, #yu[data-pose="paper"] .yu-paper, #yu[data-pose="popcorn"] .yu-popcorn { opacity: 1; }
+#yu[data-pose="read"] .yu-flip-l, #yu[data-pose="paper"] .yu-flip-l, #yu[data-pose="popcorn"] .yu-flip-l { transform: rotate(-38deg); }
+#yu[data-pose="read"] .yu-flip-r, #yu[data-pose="paper"] .yu-flip-r, #yu[data-pose="popcorn"] .yu-flip-r { transform: rotate(38deg); }
+#yu[data-pose="read"] .yu-pupils, #yu[data-pose="paper"] .yu-pupils { animation: yu-read 3.4s ease-in-out infinite; }
+#yu[data-pose="read"] .yu-pupils, #yu[data-pose="paper"] .yu-pupils, #yu[data-pose="popcorn"] .yu-pupils { transform: translateY(1.6px); }
+#yu.flip .yu-page { transform-origin: 0% 50%; animation: yu-flip .6s ease-in-out 1; }
+#yu[data-pose="think"] .yu-think { opacity: 1; }
+#yu[data-pose="think"] .yu-flip-r { transform: rotate(-70deg); }
+#yu[data-pose="cheer"] .yu-body { animation: yu-hop .9s ease-out 1; }
+#yu[data-pose="cheer"] .yu-flip-l { transform: rotate(60deg); }
+#yu[data-pose="cheer"] .yu-flip-r { transform: rotate(-60deg); }
+#yu[data-pose="cheer"] .yu-spark { opacity: 1; animation: yu-twinkle .9s ease-in-out 2; }
+#yu[data-pose="sleep"] .yu-eyes { animation: none; transform: scaleY(.12); }
+#yu[data-pose="sleep"] .yu-body { animation: yu-bob 5s ease-in-out infinite; }
+#yu[data-pose="sleep"] .yu-zz { opacity: 1; }
+#yu[data-pose="sleep"] .yu-zz text { animation: yu-z 2.6s ease-out infinite; }
+#yu[data-pose="sleep"] .yu-zz text:nth-child(2) { animation-delay: 1.3s; }
+#yu.attn .yu-body { animation: yu-attn .6s ease-in-out 3; }
+
+/* speech bubble */
+#yu-bubble {
+  position: fixed; z-index: 48; bottom: calc(100px + env(safe-area-inset-bottom, 0px)); left: 16px;
+  width: min(340px, calc(100vw - 32px)); background: var(--surface); color: var(--ink);
+  border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 18px 40px -16px rgba(0, 0, 0, .35);
+  padding: 14px 16px 14px; display: grid; gap: 10px; font-size: 15px; line-height: 1.45;
+  transform-origin: var(--tail, 80%) 100%; animation: yu-pop .22s ease-out;
+}
+#yu-bubble[hidden] { display: none !important; }
+#yu-bubble::after {
+  content: ""; position: absolute; bottom: -7px; left: var(--tail, 80%); width: 12px; height: 12px; margin-left: -6px;
+  background: var(--surface); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transform: rotate(45deg);
+}
+@keyframes yu-pop { from { transform: scale(.92); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+#yu-bubble .yu-name { font: 700 12px/1 var(--f-data); letter-spacing: .12em; text-transform: uppercase; color: var(--note); display: flex; justify-content: space-between; align-items: center; }
+#yu-bubble .yu-close { border: 0; background: none; color: var(--muted); cursor: pointer; font-size: 18px; line-height: 1; padding: 2px 4px; }
+#yu-bubble p { margin: 0; }
+#yu-bubble .yu-stats { font: 500 12.5px var(--f-data); color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; border-top: 1px dashed var(--line); padding-top: 8px; }
+#yu-bubble .yu-stats b { color: var(--ink); }
+.yu-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+.yu-actions button {
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 10px; padding: 7px 11px;
+  font: 600 13.5px var(--f-body); cursor: pointer;
+}
+.yu-actions button:hover { border-color: var(--note); }
+.yu-actions button.primary { background: var(--note); border-color: var(--note); color: var(--surface); }
+.yu-progress { font: 500 12px var(--f-data); color: var(--muted); }
+
+/* letter pose + paper plane */
+.yu-envflap { fill: none; stroke: #c9c2ad; stroke-width: .9; }
+/* the site's logo as a seal on the letter */
+.yu-seal-bg { fill: var(--yu-paper); stroke: var(--note); stroke-width: 1.4; }
+.yu-seal-lines { fill: none; stroke: var(--note); stroke-width: 1.5; }
+.yu-seal-dot { fill: var(--note); }
+#yu[data-pose="letter"] .yu-letter { opacity: 1; }
+#yu[data-pose="letter"] .yu-flip-l { transform: rotate(-38deg); }
+#yu[data-pose="letter"] .yu-flip-r { transform: rotate(38deg); }
+#yu .yu-letter { transform-box: fill-box; transform-origin: 50% 50%; transition: opacity .25s, transform .6s ease-in; }
+#yu.folding .yu-letter { transform: scale(.25, .5) rotate(-20deg); opacity: 0; }
+#yu-plane { position: fixed; left: 0; top: 0; z-index: 49; width: 56px; height: 56px; pointer-events: none; filter: drop-shadow(0 6px 8px rgba(0, 0, 0, .18)); }
+#yu-plane[hidden] { display: none !important; }
+#yu-plane svg { width: 100%; height: 100%; overflow: visible; }
+#yu-plane .yu-plane-inner { width: 100%; height: 100%; animation: yu-pop .25s ease-out; }
+#yu-plane.ready .yu-plane-inner { animation: yu-ready .35s ease-out; }
+@keyframes yu-ready { 0% { transform: translateY(0); } 50% { transform: translateY(-6px); } 100% { transform: translateY(0); } }
+.yu-plane-body { fill: var(--yu-paper); stroke: var(--note); stroke-width: 1.6; stroke-linejoin: round; transition: d .32s ease-in-out; }
+.yu-plane-line { fill: none; stroke: var(--note); stroke-width: 1.1; stroke-linejoin: round; transition: d .32s ease-in-out, opacity .25s; }
+
+/* feedback form inside the bubble */
+#yu-bubble.wide { width: min(420px, calc(100vw - 32px)); }
+.yu-form { display: grid; gap: 8px; }
+.yu-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.yu-chip { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 5px 10px; font: 600 12.5px var(--f-body); cursor: pointer; }
+.yu-chip[aria-pressed="true"] { border-color: var(--note); background: var(--note-soft); color: var(--note); }
+.yu-form textarea, .yu-form input[type="email"] {
+  width: 100%; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); color: var(--ink);
+  padding: 9px 11px; font: 400 14.5px/1.45 var(--f-body); resize: vertical;
+}
+.yu-form textarea:focus, .yu-form input:focus { outline: 2px solid var(--note); outline-offset: 1px; }
+.yu-count { font: 500 11.5px var(--f-data); color: var(--muted); text-align: right; margin-top: -4px; }
+.yu-note { font-size: 12.5px; color: var(--muted); }
+.yu-hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.yu-bad { animation: yu-shake .4s; outline: 2px solid var(--down) !important; }
+@keyframes yu-shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-5px); } 75% { transform: translateX(5px); } }
+
+/* tour spotlight */
+#yu-ring {
+  position: fixed; z-index: 46; pointer-events: none; border-radius: 14px; border: 2px solid var(--gold);
+  box-shadow: 0 0 0 9999px var(--yu-dim); transition: top .3s, left .3s, width .3s, height .3s;
+}
+#yu-ring[hidden] { display: none !important; }
+
+/* small button to bring Yu back */
+#yu-peek {
+  position: fixed; right: max(12px, env(safe-area-inset-right, 0px)); bottom: calc(12px + env(safe-area-inset-bottom, 0px)); z-index: 47;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 6px 12px 6px 8px;
+  display: flex; align-items: center; gap: 6px; font: 600 13px var(--f-body); cursor: pointer; box-shadow: var(--shadow);
+}
+#yu-peek[hidden] { display: none !important; }
+#yu-peek svg { width: 22px; height: 22px; }
+
+body.seminar #yu, body.seminar #yu-bubble, body.seminar #yu-peek { display: none !important; }
+
+@media (max-width: 600px) {
+  #yu { width: 58px; height: 64px; }
+  #yu-bubble { bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #yu, #yu * { animation: none !important; transition: none !important; }
+}
