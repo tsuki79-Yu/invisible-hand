@@ -1,6 +1,7 @@
 # Keeps Invisible Hand fresh for free:
-# - news headlines every 3 hours
-# - World Bank country data once a day
+# - news headlines and "Worth your attention" every 3 hours
+# - country data (IMF, World Bank, exchange rates) once a day
+# It also runs once whenever the updater scripts themselves change, as a test.
 name: Update data
 
 on:
@@ -8,29 +9,45 @@ on:
     - cron: "17 */3 * * *"   # news
     - cron: "40 2 * * *"     # country data
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - ".github/workflows/update-data.yml"
 
 permissions:
   contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
           node-version: 22
       - name: Fetch news headlines
         run: node scripts/fetch-news.mjs
       - name: Pick "Worth your attention"
         run: node scripts/make-spotlight.mjs
-      - name: Fetch World Bank data (once a day)
-        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '40 2 * * *'
+      - name: Fetch country data (once a day)
+        if: github.event_name != 'schedule' || github.event.schedule == '40 2 * * *'
         run: node scripts/fetch-countries.mjs
       - name: Save changes
         run: |
           git config user.name "invisible-hand-bot"
           git config user.email "invisible-hand-bot@users.noreply.github.com"
           git add data/news.js data/countries.js data/spotlight.js
-          git diff --cached --quiet || git commit -m "Update news and data"
-          git push
+          if git diff --cached --quiet; then echo "Nothing new"; exit 0; fi
+          git commit -m "Update news and data"
+          # If someone pushed while this ran, put our update on top and try again
+          for attempt in 1 2 3; do
+            git pull --rebase -X theirs origin main && git push && exit 0
+            sleep 5
+          done
+          echo "Could not save. Check Settings > Actions > General > Workflow permissions is 'Read and write'."
+          exit 1
