@@ -135,17 +135,19 @@
     }
     walkLoop = requestAnimationFrame(frame);
   }
+  // No walking: Yu ducks down and pops back up where she needs to be.
   function place(nx, animate) {
     nx = Math.max(16, Math.min(maxX(), nx));
-    var dist = Math.abs(nx - x);
-    clearTimeout(walkTimer);
-    if (!animate || reduce || dist < 4) {
-      stopWalk(); yu.classList.remove('walking');
-      yu.style.transitionDuration = '0s'; x = nx; setX(x); positionBubble(); return;
-    }
-    var dir = nx < x ? -1 : 1;
-    face(dir < 0 ? 'left' : 'right');                 // turn toward where she is going first (3D turn)
-    walkTimer = setTimeout(function () { startWalk(nx, dir); }, 420);
+    clearTimeout(walkTimer); stopWalk(); yu.classList.remove('walking'); face('');
+    yu.style.transitionDuration = '0s';
+    if (!animate || reduce || Math.abs(nx - x) < 4) { x = nx; setX(x); positionBubble(); return; }
+    yu.classList.remove('yu-in'); yu.classList.add('yu-out');
+    walkTimer = setTimeout(function () {
+      x = nx; setX(x);
+      yu.classList.remove('yu-out'); void yu.offsetWidth; yu.classList.add('yu-in');
+      positionBubble();
+      walkTimer = setTimeout(function () { yu.classList.remove('yu-in'); positionBubble(); }, 600);
+    }, 300);
     lastWalk = Date.now();
   }
   function home() { return maxX(); }
@@ -219,7 +221,7 @@
       checkReminders();
     }
     if (idle > SLEEP_AFTER && !sleeping && bubble.hidden && !touring) { sleeping = true; awayStart = lastAct; setPose('sleep'); }
-    if (!touring && !sleeping && bubble.hidden && !prefs.quiet && !small() && now - lastWalk > 150000 && idle < 20 && Math.random() < 0.05) wander();
+    
   }, 1000);
 
   function wake(awayMs) {
@@ -394,7 +396,7 @@
     basePose = poseFor(d.view);
     if (!sleeping) setPose(basePose);
     if (d.view === 'topic' && d.topic && stats.topics.indexOf(d.topic) < 0) { stats.topics.push(d.topic); save(); }
-    if (!touring && !prefs.quiet && !small() && Date.now() - lastWalk > 60000 && Math.random() < 0.25) setTimeout(wander, 900);
+    
     if (!touring && bubbleKind === 'note') hideBubble();
   });
   document.addEventListener('ih:quiz', function (e) {
@@ -512,7 +514,7 @@
     yu.classList.add('folding');
     var done = new Promise(function (resolve) {
       if (reduce || !plane.animate) { setTimeout(function () { yu.classList.remove('folding'); resolve(); }, 500); return; }
-      var S = 56, yuH = small() ? 64 : 84;
+      var S = 56, yuH = yu.offsetHeight || (small() ? 64 : 84);
       var sx = x + width() / 2 - S / 2, sy = window.innerHeight - yuH - 8 - S + 6;
       plane.style.transform = 'translate(' + sx + 'px,' + sy + 'px)';
       // 1. Yu holds the letter, then lifts the sheet up and folds it, step by step
