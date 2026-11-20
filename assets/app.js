@@ -421,7 +421,8 @@
   }
 
   /* ---------------- Hero rosette (guilloché) ---------------- */
-  var rosetteRAF = 0;
+  var rosetteRAF = 0, waves = [];
+  var WAVE_LIFE = 3000; // ms a wave lasts
   function startRosette() {
     cancelAnimationFrame(rosetteRAF);
     var cv = $('#rosette'); if (!cv) return;
@@ -431,11 +432,37 @@
     var t0 = performance.now();
     function size() { var r = cv.getBoundingClientRect(); cv.width = Math.max(1, r.width * dpr); cv.height = Math.max(1, r.height * dpr); }
     size();
+    // Click (or tap) anywhere on the rosette: waves ripple out through its lines from that point
+    var art = cv.parentElement;
+    if (!reduceMotion) {
+      art.classList.add('waves');
+      art.title = L('Click to make waves', 'Tap for waves');
+      art.onpointerdown = function (e) {
+        var r = cv.getBoundingClientRect();
+        waves.push({ x: (e.clientX - r.left) * dpr, y: (e.clientY - r.top) * dpr, t: performance.now() });
+        if (waves.length > 6) waves.shift();
+      };
+    }
+    // push a point away from each wave's centre when the wave front passes it
+    function displace(px, py, now, R) {
+      var dx = 0, dy = 0;
+      for (var i = 0; i < waves.length; i++) {
+        var w = waves[i], age = (now - w.t) / 1000;
+        var vx = px - w.x, vy = py - w.y, d = Math.sqrt(vx * vx + vy * vy) || 1;
+        var front = age * R * 0.85, band = R * 0.16, off = d - front;
+        var g = Math.exp(-(off * off) / (2 * band * band));
+        var amp = R * 0.085 * Math.max(0, 1 - age * 1000 / WAVE_LIFE) * g * Math.sin(off / band * 3.2);
+        dx += vx / d * amp; dy += vy / d * amp;
+      }
+      return [px + dx, py + dy];
+    }
     function draw(now) {
       if (!cv.isConnected) return;
       var w = cv.width, h = cv.height, ph = reduceMotion ? 0 : (now - t0) / 9000;
+      waves = waves.filter(function (wv) { return now - wv.t < WAVE_LIFE; });
+      var active = waves.length > 0;
       ctx.clearRect(0, 0, w, h);
-      var cx = w * 0.56, cy = h * 0.5, R = Math.min(w, h) * 0.44;
+      var cx = w * 0.56, cy = h * 0.5, R = Math.min(w, h) * 0.44, p;
       ctx.lineWidth = 0.8 * dpr;
       for (var layer = 0; layer < 3; layer++) {
         ctx.strokeStyle = layer === 1 ? gold : ink;
@@ -446,18 +473,33 @@
           var th = s / 1400 * Math.PI * 2;
           var r = rr * (0.78 + 0.14 * Math.sin(k1 * th + ph * (layer + 1)) + 0.08 * Math.cos(k2 * th - ph));
           var x = cx + r * Math.cos(th), y = cy + r * Math.sin(th);
+          if (active) { p = displace(x, y, now, R); x = p[0]; y = p[1]; }
           if (s) ctx.lineTo(x, y); else ctx.moveTo(x, y);
         }
         ctx.stroke();
+        ctx.globalAlpha = layer === 1 ? 0.12 : 0.07;
         for (var m = 0; m < 24; m++) {
+          var rot = m / 24 * Math.PI * 2 + ph * 0.4, cr = Math.cos(rot), sr = Math.sin(rot);
           ctx.beginPath();
-          var off = m / 24 * Math.PI * 2 + ph * 0.4;
-          ctx.ellipse(cx, cy, rr * 0.98, rr * 0.36, off, 0, Math.PI * 2);
-          ctx.globalAlpha = layer === 1 ? 0.12 : 0.07;
+          if (!active) ctx.ellipse(cx, cy, rr * 0.98, rr * 0.36, rot, 0, Math.PI * 2);
+          else {
+            for (var e = 0; e <= 72; e++) {
+              var a = e / 72 * Math.PI * 2, ex = rr * 0.98 * Math.cos(a), ey = rr * 0.36 * Math.sin(a);
+              p = displace(cx + ex * cr - ey * sr, cy + ex * sr + ey * cr, now, R);
+              if (e) ctx.lineTo(p[0], p[1]); else ctx.moveTo(p[0], p[1]);
+            }
+          }
           ctx.stroke();
         }
       }
-      ctx.globalAlpha = 1;
+      // soft rings spreading from where you clicked
+      waves.forEach(function (wv) {
+        var age = (now - wv.t) / WAVE_LIFE, rad = (now - wv.t) / 1000 * R * 0.85;
+        ctx.globalAlpha = 0.45 * (1 - age); ctx.strokeStyle = gold; ctx.lineWidth = 1.4 * dpr;
+        ctx.beginPath(); ctx.arc(wv.x, wv.y, rad, 0, Math.PI * 2); ctx.stroke();
+        if (rad > R * 0.18) { ctx.globalAlpha = 0.25 * (1 - age); ctx.strokeStyle = ink; ctx.beginPath(); ctx.arc(wv.x, wv.y, rad - R * 0.18, 0, Math.PI * 2); ctx.stroke(); }
+      });
+      ctx.globalAlpha = 1; ctx.lineWidth = 0.8 * dpr;
       if (!reduceMotion) rosetteRAF = requestAnimationFrame(draw);
     }
     rosetteRAF = requestAnimationFrame(draw);

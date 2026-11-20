@@ -466,3 +466,7 @@ footer a { color: var(--note); }
 @media (prefers-reduced-motion: reduce) {
   .brand:hover .brand-mark svg, .brand.beat .brand-mark svg, .brand.beat .brand-mark .brand-rings, .brand.beat .brand-mark .brand-dot { animation: none; }
 }
+
+/* the hero rosette makes waves when clicked */
+.hero-art.waves { cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+.hero-art .stamp { pointer-events: none; }
