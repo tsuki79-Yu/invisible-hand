@@ -872,6 +872,13 @@
     if (e.target.id === 'countrySel') setCountry(e.target.value);
     if (e.target.id === 'compareSel') { state.compare = e.target.value; store.set('compare', state.compare); renderToday(); }
   });
+  // the logo beats like a heart when clicked or tapped
+  document.addEventListener('click', function (e) {
+    var brand = e.target.closest && e.target.closest('.brand');
+    if (!brand) return;
+    brand.classList.remove('beat'); void brand.offsetWidth; brand.classList.add('beat');
+    clearTimeout(brand._beatT); brand._beatT = setTimeout(function () { brand.classList.remove('beat'); }, 1250);
+  });
   document.addEventListener('click', function (e) {
     var b = e.target.closest('button'); if (!b) return;
     if (b.dataset.follow) {
