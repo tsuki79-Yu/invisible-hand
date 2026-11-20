@@ -9,7 +9,7 @@
 // Each figure keeps a note of its source. Where the IMF and World Bank disagree a lot on the same
 // year, the gap is stored so the site can tell students the sources differ.
 // Run: node scripts/fetch-countries.mjs
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, readFile } from 'node:fs/promises';
 
 const FROM = 2000;
 const NOW = new Date().getUTCFullYear();      // current year: IMF estimate
@@ -33,7 +33,7 @@ const CURRENCY = Object.fromEntries(('ABW:AWG AFG:AFN AGO:AOA ALB:ALL AND:EUR AR
 async function getJSON(url) {
   for (let i = 0; i < 4; i++) {
     try {
-      const r = await fetch(url, { headers: { 'User-Agent': 'InvisibleHand/1.0 (education)' }, signal: AbortSignal.timeout(60000) });
+      const r = await fetch(url, { headers: { 'User-Agent': 'InvisibleHand/1.0 (education; https://tsuki79-yu.github.io/invisible-hand/)', Accept: 'application/json' }, signal: AbortSignal.timeout(60000) });
       if (r.ok) return await r.json();
     } catch (e) { /* retry */ }
     await new Promise(res => setTimeout(res, 2000 * (i + 1)));
@@ -75,7 +75,12 @@ for (const [k, d] of Object.entries(IND)) {
   console.log('World Bank', k);
 }
 
-/* ---------- IMF estimates & forecasts ---------- */
+/* ---------- IMF estimates & forecasts ----------
+   The IMF publishes new forecasts twice a year (April and October). Its server sometimes refuses
+   automated requests (for example from GitHub's servers), so every successful download is saved to
+   data/imf-cache.json and reused when the IMF can't be reached. */
+let imfCache = {};
+try { imfCache = JSON.parse(await readFile('data/imf-cache.json', 'utf8')); } catch { /* first run */ }
 const imf = {};
 for (const [k, d] of Object.entries(IND)) {
   if (!d.imf) continue;
@@ -89,9 +94,16 @@ for (const [k, d] of Object.entries(IND)) {
       if (id === 'WLD' && k === 'pop') continue; // IMF "world" only sums its member countries; keep the UN/World Bank total
       imf[k][id] = Object.fromEntries(Object.entries(years).map(([y, v]) => [y, v * d.imfScale]));
     }
+    if (Object.keys(imf[k]).length < 50) throw new Error('too few countries');
+    imfCache[k] = { saved: new Date().toISOString().slice(0, 10), values: imf[k] };
     console.log('IMF', k, Object.keys(imf[k]).length, 'countries');
-  } catch (e) { console.log('IMF', k, 'unavailable:', e.message); }
+  } catch (e) {
+    if (imfCache[k]) { imf[k] = imfCache[k].values; console.log('IMF', k, 'unreachable, using saved copy from', imfCache[k].saved); }
+    else console.log('IMF', k, 'unavailable and no saved copy:', e.message);
+  }
 }
+await mkdir('data', { recursive: true });
+await writeFile('data/imf-cache.json', JSON.stringify(imfCache));
 
 /* ---------- merge: IMF where it has the year, World Bank otherwise ---------- */
 for (const [id, c] of Object.entries(countries)) {

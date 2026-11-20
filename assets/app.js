@@ -38,9 +38,9 @@
   var T = {
     en: {
       navToday: 'Today', navLearn: 'Learn', navNews: 'News', navFilms: 'Films', navLibrary: 'Library', search: 'Search',
-      heroTitle: 'Know the numbers <em>before the professor asks.</em>',
-      heroLede: 'Pick any country to see the seven figures every economist should know, straight from the World Bank, with the news and ideas behind them.',
-      showMe: 'Show me', seminarOn: 'Seminar mode', seminarOff: 'Exit seminar mode',
+      heroTitle: 'The economy, <em>made clear.</em>',
+      heroLede: 'Live figures for every country, news from trusted free sources, the big ideas with their history, classic papers, films and research tools. Free and open to everyone.',
+      showMe: 'Show me', seminarOn: 'Presentation mode', seminarOff: 'Exit presentation mode',
       sevenTitle: '7 things to know about', compareWith: 'Compare with', none: 'No comparison',
       signals: 'What stands out', spotTitle: 'Worth your attention', spotSub: 'What everyone is talking about, and what deserves a closer look. Picked by the editors, linked to the original reporting.',
       loud: 'Everyone is talking about', quiet: 'Worth a closer look', learnConcept: 'Learn the concept', weekOf: 'Week of',
@@ -61,13 +61,13 @@
       aiTip: '<b>Before you cite an AI answer:</b> open the original source. AI tools sometimes invent references, so check every paper on Google Scholar.',
       copyCite: 'Copy citation', copied: 'Citation copied', noData: 'No data', latestYr: 'latest', vs: 'vs',
       sourceLine: 'Sources: IMF World Economic Outlook for this year\'s estimates (est.) and next year\'s forecasts, World Bank for the history, ExchangeRate-API for today\'s exchange rate. Refreshed daily. Where the IMF and World Bank disagree a lot, the card says so.',
-      seminarHint: 'Big numbers for the projector.', learnMore: 'Learn more'
+      seminarHint: 'Big numbers for a projector or screen share.', learnMore: 'Learn more'
     },
     gz: {
       navToday: 'Today', navLearn: 'Learn', navNews: 'The tea', navFilms: 'Movies', navLibrary: 'Toolkit', search: 'Search',
-      heroTitle: 'Know the numbers <em>before the prof asks.</em>',
-      heroLede: 'Pick a country, get the 7 stats that actually matter. Real World Bank data, zero gatekeeping.',
-      showMe: 'Spill the stats on', seminarOn: 'Seminar mode', seminarOff: 'Exit seminar mode',
+      heroTitle: 'The economy, <em>but make it make sense.</em>',
+      heroLede: 'Real stats for every country, legit free news, big ideas with the backstory, papers, movies and tools. Free for everyone.',
+      showMe: 'Spill the stats on', seminarOn: 'Presentation mode', seminarOff: 'Exit presentation mode',
       sevenTitle: '7 stats that matter for', compareWith: 'Vs', none: 'Nobody',
       signals: 'The tea, from the data', spotTitle: "Don't sleep on this", spotSub: "What everyone's yapping about vs what you should actually be watching.",
       loud: 'Everyone is yapping about', quiet: 'Lowkey more important', learnConcept: 'Get the concept', weekOf: 'Week of',
@@ -88,7 +88,7 @@
       aiTip: '<b>Real talk:</b> AI sometimes makes up sources. Always open the actual paper on Google Scholar before you cite it.',
       copyCite: 'Copy citation', copied: 'Citation copied', noData: 'No data', latestYr: 'latest', vs: 'vs',
       sourceLine: 'Sources: IMF (this year\'s estimates + next year\'s forecasts), World Bank (history), ExchangeRate-API (today\'s rate). Refreshed daily.',
-      seminarHint: 'Big numbers for the projector.', learnMore: 'Learn more'
+      seminarHint: 'Big numbers for a projector or screen share.', learnMore: 'Learn more'
     }
   };
   function t(k) { return (T[state.lang] && T[state.lang][k]) || T.en[k] || k; }
@@ -186,23 +186,31 @@
 
   /* ---------------- Signals (computed from data) ---------------- */
   function avg(arr, from, to) { var s = 0, n = 0; for (var i = from; i <= to; i++) if (arr[i] != null) { s += arr[i]; n++; } return n ? s / n : null; }
+  // Link to the exact source of a figure, shown in brackets after each note
+  function srcLink(id, k, i) {
+    var c = C.countries[id] || {}, code = C.codes && C.codes[k] ? C.codes[k] : {};
+    if (srcAt(id, k, i) === 'i' && code.imf) {
+      return '<a class="cite" href="https://www.imf.org/external/datamapper/' + code.imf + '@WEO/' + (id === 'WLD' ? 'WEOWORLD' : id) + '" target="_blank" rel="noopener">(' + esc(L('IMF World Economic Outlook', 'IMF')) + (isEst(id, k, i) ? ', ' + esc(L('estimate', 'est.')) : '') + ' ↗)</a>';
+    }
+    return '<a class="cite" href="https://data.worldbank.org/indicator/' + (code.wb || '') + (c.a2 && id !== 'WLD' ? '?locations=' + c.a2 : '') + '" target="_blank" rel="noopener">(' + esc(L('World Bank', 'World Bank')) + ' ↗)</a>';
+  }
   function signals(id) {
     var out = [], gz = state.lang === 'gz', name = cname(id);
     var inf = series(id, 'infl'), li = lastIdx(inf);
     if (li > 5) {
       var a = avg(inf, li - 10, li - 1), v = inf[li];
-      if (a != null && v - a > 1.5) out.push({ c: 'hot', s: Math.abs(v - a), h: gz ? '<b>Inflation is running hot:</b> ' + v.toFixed(1) + '% in ' + yearOf(li) + ' vs a ' + a.toFixed(1) + '% 10-year average.' : '<b>Inflation is above normal.</b> ' + v.toFixed(1) + '% in ' + yearOf(li) + ', compared with a 10-year average of ' + a.toFixed(1) + '%.' });
-      else if (a != null && a - v > 1.5) out.push({ c: 'good', s: Math.abs(v - a), h: gz ? '<b>Inflation is cooling off:</b> ' + v.toFixed(1) + '% vs ' + a.toFixed(1) + '% on average.' : '<b>Inflation is below its usual level.</b> ' + v.toFixed(1) + '% in ' + yearOf(li) + ', compared with a 10-year average of ' + a.toFixed(1) + '%.' });
+      if (a != null && v - a > 1.5) out.push({ k: 'infl', i: li, c: 'hot', s: Math.abs(v - a), h: gz ? '<b>Inflation is running hot:</b> ' + v.toFixed(1) + '% in ' + yearOf(li) + ' vs a ' + a.toFixed(1) + '% 10-year average.' : '<b>Inflation is above normal.</b> ' + v.toFixed(1) + '% in ' + yearOf(li) + ', compared with a 10-year average of ' + a.toFixed(1) + '%.' });
+      else if (a != null && a - v > 1.5) out.push({ k: 'infl', i: li, c: 'good', s: Math.abs(v - a), h: gz ? '<b>Inflation is cooling off:</b> ' + v.toFixed(1) + '% vs ' + a.toFixed(1) + '% on average.' : '<b>Inflation is below its usual level.</b> ' + v.toFixed(1) + '% in ' + yearOf(li) + ', compared with a 10-year average of ' + a.toFixed(1) + '%.' });
     }
     var g = series(id, 'growth'), lg = lastIdx(g);
     if (lg > 5) {
       var ga = avg(g, lg - 10, lg - 1), gv = g[lg];
-      if (ga != null && Math.abs(gv - ga) > 1) out.push({ c: gv > ga ? 'good' : 'hot', s: Math.abs(gv - ga), h: gz ? '<b>Growth ' + (gv > ga ? 'is popping off' : 'is slowing') + ':</b> ' + gv.toFixed(1) + '% vs ' + ga.toFixed(1) + '% usual.' : '<b>The economy grew ' + (gv > ga ? 'faster' : 'slower') + ' than usual.</b> ' + gv.toFixed(1) + '% in ' + yearOf(lg) + ' vs a 10-year average of ' + ga.toFixed(1) + '%.' });
+      if (ga != null && Math.abs(gv - ga) > 1) out.push({ k: 'growth', i: lg, c: gv > ga ? 'good' : 'hot', s: Math.abs(gv - ga), h: gz ? '<b>Growth ' + (gv > ga ? 'is popping off' : 'is slowing') + ':</b> ' + gv.toFixed(1) + '% vs ' + ga.toFixed(1) + '% usual.' : '<b>The economy grew ' + (gv > ga ? 'faster' : 'slower') + ' than usual.</b> ' + gv.toFixed(1) + '% in ' + yearOf(lg) + ' vs a 10-year average of ' + ga.toFixed(1) + '%.' });
     }
     var fx = series(id, 'fx'), lf = lastIdx(fx);
     if (lf > 5 && id !== 'USA' && fx[lf - 5] != null) {
       var ch = (1 - fx[lf - 5] / fx[lf]) * 100, cur = CUR[id] || 'local currency';
-      if (Math.abs(ch) > 8) out.push({ c: 'watch', s: Math.abs(ch) / 4, h: ch > 0
+      if (Math.abs(ch) > 8) out.push({ k: 'fx', i: lf, c: 'watch', s: Math.abs(ch) / 4, h: ch > 0
         ? (gz ? '<b>The ' + cur + ' got weaker:</b> it lost ' + ch.toFixed(0) + '% vs the dollar since ' + yearOf(lf - 5) + '. Imports cost more.' : '<b>The ' + cur + ' has weakened.</b> It lost ' + ch.toFixed(0) + '% of its value against the dollar between ' + yearOf(lf - 5) + ' and ' + yearOf(lf) + ', making imports more expensive.')
         : (gz ? '<b>The ' + cur + ' got stronger:</b> up ' + (-ch).toFixed(0) + '% vs the dollar since ' + yearOf(lf - 5) + '.' : '<b>The ' + cur + ' has strengthened.</b> It gained ' + (-ch).toFixed(0) + '% against the dollar between ' + yearOf(lf - 5) + ' and ' + yearOf(lf) + '.') });
     }
@@ -210,14 +218,15 @@
       var pc = series(id, 'gdppc'), lp = lastIdx(pc), w = series('WLD', 'gdppc'), lw = lastIdx(w);
       if (lp >= 0 && lw >= 0) {
         var ratio = pc[lp] / w[lw] * 100;
-        out.push({ c: ratio >= 100 ? 'good' : 'watch', s: 1, h: gz ? '<b>Average income vs the world:</b> ' + ratio.toFixed(0) + '% of the global average.' : '<b>Average income is ' + ratio.toFixed(0) + '% of the world average</b> (GDP per person, ' + yearOf(lp) + ').' });
+        out.push({ k: 'gdppc', i: lp, c: ratio >= 100 ? 'good' : 'watch', s: 1, h: gz ? '<b>Average income vs the world:</b> ' + ratio.toFixed(0) + '% of the global average.' : '<b>Average income is ' + ratio.toFixed(0) + '% of the world average</b> (GDP per person, ' + yearOf(lp) + ').' });
       }
       var u = series(id, 'unemp'), lu = lastIdx(u), wu = series('WLD', 'unemp'), lwu = lastIdx(wu);
-      if (lu >= 0 && lwu >= 0 && Math.abs(u[lu] - wu[lwu]) > 2) out.push({ c: u[lu] > wu[lwu] ? 'hot' : 'good', s: Math.abs(u[lu] - wu[lwu]) / 2, h: gz ? '<b>Jobs check:</b> unemployment ' + u[lu].toFixed(1) + '% vs ' + wu[lwu].toFixed(1) + '% globally.' : '<b>Unemployment is ' + (u[lu] > wu[lwu] ? 'above' : 'below') + ' the world rate:</b> ' + u[lu].toFixed(1) + '% vs ' + wu[lwu].toFixed(1) + '%.' });
+      if (lu >= 0 && lwu >= 0 && Math.abs(u[lu] - wu[lwu]) > 2) out.push({ k: 'unemp', i: lu, c: u[lu] > wu[lwu] ? 'hot' : 'good', s: Math.abs(u[lu] - wu[lwu]) / 2, h: gz ? '<b>Jobs check:</b> unemployment ' + u[lu].toFixed(1) + '% vs ' + wu[lwu].toFixed(1) + '% globally.' : '<b>Unemployment is ' + (u[lu] > wu[lwu] ? 'above' : 'below') + ' the world rate:</b> ' + u[lu].toFixed(1) + '% vs ' + wu[lwu].toFixed(1) + '%.' });
     } else {
       var pop = series('WLD', 'pop'), lpp = lastIdx(pop);
-      if (lpp > 10) out.push({ c: 'watch', s: 1, h: '<b>The world added ' + ((pop[lpp] - pop[lpp - 10]) / 1e6).toFixed(0) + ' million people</b> between ' + yearOf(lpp - 10) + ' and ' + yearOf(lpp) + '.' });
+      if (lpp > 10) out.push({ k: 'pop', i: lpp, c: 'watch', s: 1, h: '<b>The world added ' + ((pop[lpp] - pop[lpp - 10]) / 1e6).toFixed(0) + ' million people</b> between ' + yearOf(lpp - 10) + ' and ' + yearOf(lpp) + '.' });
     }
+    out.forEach(function (x) { if (x.k) x.h += ' ' + srcLink(id, x.k, x.i); });
     out.sort(function (a, b) { return b.s - a.s; });
     if (!out.length) out.push({ c: '', s: 0, h: 'Not enough recent data for ' + esc(name) + ' to compare against its history.' });
     return out.slice(0, 4);

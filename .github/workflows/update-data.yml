@@ -41,7 +41,7 @@ jobs:
         run: |
           git config user.name "invisible-hand-bot"
           git config user.email "invisible-hand-bot@users.noreply.github.com"
-          git add data/news.js data/countries.js data/spotlight.js
+          git add data/news.js data/countries.js data/spotlight.js data/imf-cache.json
           if git diff --cached --quiet; then echo "Nothing new"; exit 0; fi
           git commit -m "Update news and data"
           # If someone pushed while this ran, put our update on top and try again

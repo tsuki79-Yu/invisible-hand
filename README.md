@@ -20,7 +20,9 @@ Your site: `https://<your-username>.github.io/invisible-hand/`
 |---|---|---|
 | News headlines from 22 sources | every 3 hours | `data/news.js` |
 | "Worth your attention" picks | every 3 hours | `data/spotlight.js` |
-| Country data (World Bank) | once a day | `data/countries.js` |
+| Country data (IMF, World Bank, exchange rates) | once a day | `data/countries.js` |
+
+If the IMF data service is down, the updater uses its last saved copy (`data/imf-cache.json`), so the site keeps showing current-year estimates.
 
 "Worth your attention" is picked by `scripts/make-spotlight.mjs`: the story the most outlets are covering, next to a quieter story about the real economy, plus one pair from Uzbekistan & Central Asia. To write the picks by hand instead, set `"mode": "editor"` and today's date in `"updated"`; the automatic picker then leaves them alone for 7 days.
 

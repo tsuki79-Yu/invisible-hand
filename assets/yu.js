@@ -39,25 +39,36 @@
 
   /* ---------- the penguin ---------- */
   var SVG = '<svg viewBox="0 0 100 110" aria-hidden="true">' +
+    '<defs>' +
+      '<radialGradient id="yuG-dark" cx=".35" cy=".28" r=".85"><stop offset="0" stop-color="#4d6168"/><stop offset=".5" stop-color="#1f2c31"/><stop offset="1" stop-color="#10181b"/></radialGradient>' +
+      '<radialGradient id="yuG-belly" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#f8f4ea"/><stop offset="1" stop-color="#e2dac6"/></radialGradient>' +
+      '<radialGradient id="yuG-gold" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#ffd884"/><stop offset=".6" stop-color="#e3a535"/><stop offset="1" stop-color="#b47b1b"/></radialGradient>' +
+      '<linearGradient id="yuG-scarf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b8a71"/><stop offset="1" stop-color="#0a4a3d"/></linearGradient>' +
+    '</defs>' +
     '<ellipse class="yu-shadowel" cx="50" cy="105" rx="24" ry="3.4"/>' +
     '<g class="yu-body">' +
+      '<g class="yu-foot yu-foot-l"><ellipse class="yu-gold" cx="40" cy="101.5" rx="7.5" ry="3.4"/></g>' +
+      '<g class="yu-foot yu-foot-r"><ellipse class="yu-gold" cx="60" cy="101.5" rx="7.5" ry="3.4"/></g>' +
       '<g class="yu-flip-l"><ellipse class="yu-dark" cx="23" cy="74" rx="6.5" ry="12.5" transform="rotate(28 23 74)"/></g>' +
       '<g class="yu-flip-r"><ellipse class="yu-dark" cx="77" cy="74" rx="6.5" ry="12.5" transform="rotate(-28 77 74)"/></g>' +
-      '<ellipse class="yu-gold" cx="40" cy="101.5" rx="7.5" ry="3.4"/><ellipse class="yu-gold" cx="60" cy="101.5" rx="7.5" ry="3.4"/>' +
       '<ellipse class="yu-dark" cx="50" cy="78" rx="27" ry="23.5"/>' +
-      '<ellipse class="yu-belly" cx="50" cy="82" rx="18.5" ry="17.5"/>' +
+      '<g class="yu-bellywrap"><ellipse class="yu-belly" cx="50" cy="82" rx="18.5" ry="17.5"/></g>' +
       '<g class="yu-tuft"><path class="yu-dark" d="M47 16 C43 7 52 1 58 5 C52 6 50 10 53 16 Z"/></g>' +
+      '<ellipse class="yu-neckshade" cx="50" cy="66" rx="24" ry="5"/>' +
       '<circle class="yu-dark" cx="50" cy="42" r="29.5"/>' +
-      '<path class="yu-belly" d="M50 30 C42 21 25.5 25.5 25.5 42 C25.5 56 37.5 64.5 50 64.5 C62.5 64.5 74.5 56 74.5 42 C74.5 25.5 58 21 50 30 Z"/>' +
+      '<path class="yu-rim" d="M25 33 A28 28 0 0 1 44 13.5"/>' +
+      '<g class="yu-face">' +
+        '<path class="yu-belly" d="M50 30 C42 21 25.5 25.5 25.5 42 C25.5 56 37.5 64.5 50 64.5 C62.5 64.5 74.5 56 74.5 42 C74.5 25.5 58 21 50 30 Z"/>' +
+        '<g class="yu-look"><g class="yu-eyes"><g class="yu-pupils">' +
+          '<ellipse class="yu-pupil" cx="40" cy="43" rx="5.6" ry="6.7"/><ellipse class="yu-pupil" cx="60" cy="43" rx="5.6" ry="6.7"/>' +
+          '<circle class="yu-shine" cx="42.1" cy="40.3" r="2.3"/><circle class="yu-shine" cx="62.1" cy="40.3" r="2.3"/>' +
+          '<circle class="yu-shine" cx="38.2" cy="46.2" r="1.05"/><circle class="yu-shine" cx="58.2" cy="46.2" r="1.05"/>' +
+        '</g></g></g>' +
+        '<g class="yu-happy"><path class="yu-arc" d="M34.5 45 Q40 37.5 45.5 45"/><path class="yu-arc" d="M54.5 45 Q60 37.5 65.5 45"/></g>' +
+        '<ellipse class="yu-blush" cx="31" cy="53" rx="5.2" ry="3.1"/><ellipse class="yu-blush" cx="69" cy="53" rx="5.2" ry="3.1"/>' +
+        '<path class="yu-gold" d="M46.3 51 Q50 57.5 53.7 51 Q50 49.3 46.3 51 Z"/>' +
+      '</g>' +
       '<path class="yu-gold" d="M71 20.5 l1.7 3.5 3.8 .55 -2.75 2.7 .65 3.8 -3.4 -1.8 -3.4 1.8 .65 -3.8 -2.75 -2.7 3.8 -.55 Z"/>' +
-      '<g class="yu-eyes"><g class="yu-pupils">' +
-        '<ellipse class="yu-pupil" cx="40" cy="43" rx="5.6" ry="6.7"/><ellipse class="yu-pupil" cx="60" cy="43" rx="5.6" ry="6.7"/>' +
-        '<circle class="yu-shine" cx="42.1" cy="40.3" r="2.3"/><circle class="yu-shine" cx="62.1" cy="40.3" r="2.3"/>' +
-        '<circle class="yu-shine" cx="38.2" cy="46.2" r="1.05"/><circle class="yu-shine" cx="58.2" cy="46.2" r="1.05"/>' +
-      '</g></g>' +
-      '<g class="yu-happy"><path class="yu-arc" d="M34.5 45 Q40 37.5 45.5 45"/><path class="yu-arc" d="M54.5 45 Q60 37.5 65.5 45"/></g>' +
-      '<ellipse class="yu-blush" cx="31" cy="53" rx="5.2" ry="3.1"/><ellipse class="yu-blush" cx="69" cy="53" rx="5.2" ry="3.1"/>' +
-      '<path class="yu-gold" d="M46.3 51 Q50 57.5 53.7 51 Q50 49.3 46.3 51 Z"/>' +
       '<path class="yu-scarf" d="M27.5 63.5 Q50 74.5 72.5 63.5 L72.5 69.5 Q50 80.5 27.5 69.5 Z"/>' +
       '<path class="yu-scarf" d="M60 72 L66 86 L60 88 L56 74 Z"/><rect class="yu-scarf-stripe" x="57.8" y="79" width="6.5" height="2" transform="rotate(-22 61 80)"/>' +
       /* props */
@@ -89,26 +100,48 @@
   var x = 0, walkTimer = 0, lastWalk = Date.now();
   function width() { return yu.offsetWidth || 76; }
   function maxX() { return Math.max(16, window.innerWidth - width() - 16); }
+  var faceTimer = 0;
+  function face(dir) { clearTimeout(faceTimer); if (dir) yu.dataset.face = dir; else delete yu.dataset.face; }
   function place(nx, animate) {
     nx = Math.max(16, Math.min(maxX(), nx));
     var dist = Math.abs(nx - x);
     if (!animate || reduce || dist < 4) {
       yu.style.transitionDuration = '0s'; x = nx; yu.style.setProperty('--yu-x', x + 'px'); positionBubble(); return;
     }
-    var dur = dist / 70;
-    yu.classList.toggle('face-left', nx < x);
-    yu.classList.add('walking');
-    yu.style.transitionDuration = dur + 's';
-    x = nx; yu.style.setProperty('--yu-x', x + 'px');
+    var dur = Math.min(9, dist / 32);   // a slow, calm waddle
+    face(nx < x ? 'left' : 'right');     // turn toward where she is going (3D turn)
     clearTimeout(walkTimer);
-    walkTimer = setTimeout(function () { yu.classList.remove('walking'); yu.classList.remove('face-left'); positionBubble(); }, dur * 1000);
+    walkTimer = setTimeout(function () {
+      yu.classList.add('walking');
+      yu.style.transitionDuration = dur + 's';
+      x = nx; yu.style.setProperty('--yu-x', x + 'px');
+      walkTimer = setTimeout(function () {
+        yu.classList.remove('walking'); positionBubble();
+        faceTimer = setTimeout(function () { face(''); }, 700); // then turn back to face you
+      }, dur * 1000);
+      var start = Date.now();
+      (function follow() { positionBubble(); if (Date.now() - start < dur * 1000) requestAnimationFrame(follow); })();
+    }, 350);                             // turn first, then start walking
     lastWalk = Date.now();
-    var start = Date.now();
-    (function follow() { positionBubble(); if (Date.now() - start < dur * 1000) requestAnimationFrame(follow); })();
   }
   function home() { return maxX(); }
   place(home(), false);
   window.addEventListener('resize', function () { if (x > maxX()) place(maxX(), false); positionBubble(); placeRing(); });
+
+
+  /* ---------- eyes follow the pointer, gently ---------- */
+  var lookRAF = 0;
+  window.addEventListener('pointermove', function (e) {
+    if (reduce || lookRAF) return;
+    lookRAF = requestAnimationFrame(function () {
+      lookRAF = 0;
+      var r = yu.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height * 0.4;
+      var dx = e.clientX - cx, dy = e.clientY - cy, d = Math.max(1, Math.sqrt(dx * dx + dy * dy));
+      var k = Math.min(1, d / 300);
+      yu.style.setProperty('--lx', (dx / d * 2.2 * k).toFixed(2) + 'px');
+      yu.style.setProperty('--ly', (dy / d * 1.6 * k).toFixed(2) + 'px');
+    });
+  }, { passive: true });
 
   /* ---------- poses ---------- */
   var basePose = 'idle', poseTimer = 0;
@@ -162,7 +195,7 @@
       checkReminders();
     }
     if (idle > SLEEP_AFTER && !sleeping && bubble.hidden && !touring) { sleeping = true; awayStart = lastAct; setPose('sleep'); }
-    if (!touring && !sleeping && bubble.hidden && !prefs.quiet && !small() && now - lastWalk > 75000 && idle < 20 && Math.random() < 0.08) wander();
+    if (!touring && !sleeping && bubble.hidden && !prefs.quiet && !small() && now - lastWalk > 150000 && idle < 20 && Math.random() < 0.05) wander();
   }, 1000);
 
   function wake(awayMs) {
@@ -215,7 +248,7 @@
 
   /* ---------- wandering ---------- */
   function wander() {
-    var w = window.innerWidth, target = x + (Math.random() < 0.5 ? -1 : 1) * (w * (0.15 + Math.random() * 0.25));
+    var w = window.innerWidth, target = x + (Math.random() < 0.5 ? -1 : 1) * (w * (0.1 + Math.random() * 0.12));
     if (target < 16 || target > maxX()) target = x - (target - x);
     place(target, true);
   }
@@ -269,7 +302,7 @@
 
   /* ---------- guided tour ---------- */
   var STEPS = [
-    { hash: '#today', sel: '#countrySel', en: 'Start here. Pick any country and the seven key numbers below update instantly. Perfect for when your professor asks "what\'s Uzbekistan\'s inflation?"', gz: 'Start here. Pick a country and the 7 key stats update instantly. For when the prof asks "what\'s Uzbekistan\'s inflation?" and you just know.' },
+    { hash: '#today', sel: '#countrySel', en: 'Start here. Pick any country and the seven key numbers below update instantly.', gz: 'Start here. Pick a country and the 7 key stats update instantly.' },
     { hash: '#today', sel: '.tiles', en: 'Each card shows the latest figure, the change since last year and a 15-year trend. "Copy citation" gives you a proper source for essays.', gz: 'Each card: latest number, change vs last year, 15-year trend. "Copy citation" = instant source for your essay.' },
     { hash: '#today', sel: '#compareSel', en: 'Compare two countries side by side. The gold line on every chart is the second country.', gz: 'Country vs country. The gold line is the second one.' },
     { hash: '#today', sel: '.spot-grid', en: 'Every few hours I check 22 news sources. On top: what everyone is talking about. In gold: the quieter story that matters more for the economy.', gz: 'I check 22 news sources every few hours. Top = what everyone\'s yapping about. Gold = the story that actually matters.' },
@@ -337,7 +370,7 @@
     basePose = poseFor(d.view);
     if (!sleeping) setPose(basePose);
     if (d.view === 'topic' && d.topic && stats.topics.indexOf(d.topic) < 0) { stats.topics.push(d.topic); save(); }
-    if (!touring && !prefs.quiet && !small() && Math.random() < 0.5) setTimeout(wander, 600);
+    if (!touring && !prefs.quiet && !small() && Date.now() - lastWalk > 60000 && Math.random() < 0.25) setTimeout(wander, 900);
     if (!touring && bubbleKind === 'note') hideBubble();
   });
   document.addEventListener('ih:quiz', function (e) {
@@ -504,7 +537,7 @@
     setTimeout(function () {
       prefs.greeted = true; save();
       flash('wave', 1400);
-      say(L('Hi, I\'m <b>Yu</b>! I\'m a penguin who loves economics, and I\'ll be your study buddy. Want a quick tour of how to learn here?', 'Hii, I\'m <b>Yu</b>! Penguin, econ nerd, your new study buddy. Want the quick tour?'), {
+      say(L('Hi, I\'m <b>Yu</b>, your study buddy here. Want a quick tour of how everything works?', 'Hii, I\'m <b>Yu</b>, your study buddy. Want the quick tour?'), {
         sticky: true, kind: 'menu',
         actions: [{ label: L('Yes, show me', 'Yes pls'), primary: true, fn: startTour }, { label: L('Maybe later', 'Later'), fn: function () { hideBubble(); say(L('Okay! Click me whenever you\'re ready.', 'Okay! Click me whenever.'), { timeout: 4000 }); } }]
       });

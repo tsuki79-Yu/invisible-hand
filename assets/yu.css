@@ -21,14 +21,24 @@
   -webkit-tap-highlight-color: transparent;
 }
 #yu:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 18px; }
-#yu .yu-flipwrap { width: 100%; height: 100%; transition: transform .25s; }
-#yu.face-left .yu-flipwrap { transform: scaleX(-1); }
+#yu .yu-flipwrap { width: 100%; height: 100%; transition: transform .55s cubic-bezier(.3,.7,.3,1); transform: perspective(260px) rotateY(0deg); }
+/* 3D turn: she rotates toward where she walks, then turns back to face you */
+#yu[data-face="right"] .yu-flipwrap { transform: perspective(260px) rotateY(24deg); }
+#yu[data-face="left"] .yu-flipwrap { transform: perspective(260px) rotateY(-24deg); }
+#yu .yu-face { transform-box: view-box; transition: transform .55s cubic-bezier(.3,.7,.3,1); }
+#yu[data-face="right"] .yu-face { transform: translateX(3.5px); }
+#yu[data-face="left"] .yu-face { transform: translateX(-3.5px); }
+#yu .yu-look { transform: translate(var(--lx, 0px), var(--ly, 0px)); transition: transform .35s ease-out; }
+#yu[data-face="right"] .yu-look { transform: translate(1.6px, 0); }
+#yu[data-face="left"] .yu-look { transform: translate(-1.6px, 0); }
 #yu svg { width: 100%; height: 100%; overflow: visible; display: block; }
-.yu-dark { fill: var(--yu-dark); stroke: var(--yu-outline); stroke-width: 1.2; }
-.yu-belly { fill: var(--yu-belly); }
-.yu-gold { fill: var(--yu-gold); }
+.yu-dark { fill: url(#yuG-dark); stroke: var(--yu-outline); stroke-width: 1.2; }
+.yu-belly { fill: url(#yuG-belly); }
+.yu-gold { fill: url(#yuG-gold); }
 .yu-blush { fill: var(--yu-blush); opacity: .55; }
-.yu-scarf { fill: var(--note); }
+.yu-scarf { fill: url(#yuG-scarf); }
+.yu-neckshade { fill: rgba(0, 0, 0, .22); }
+.yu-rim { fill: none; stroke: rgba(255, 255, 255, .28); stroke-width: 2.2; stroke-linecap: round; }
 .yu-scarf-stripe { fill: var(--gold); }
 .yu-pupil { fill: #14191b; }
 .yu-shine { fill: #fff; }
@@ -41,7 +51,10 @@
 
 /* parts that animate */
 #yu .yu-body, #yu .yu-eyes, #yu .yu-pupils, #yu .yu-flip-l, #yu .yu-flip-r, #yu .yu-page, #yu .yu-zz text, #yu .yu-spark { transform-box: fill-box; }
-#yu .yu-body { transform-origin: 50% 100%; animation: yu-bob 3.2s ease-in-out infinite; }
+#yu .yu-body { transform-origin: 50% 100%; animation: yu-breathe 4.2s ease-in-out infinite; }
+#yu .yu-foot, #yu .yu-shadowel, #yu .yu-bellywrap { transform-box: fill-box; transform-origin: 50% 100%; }
+#yu .yu-shadowel { transform-origin: 50% 50%; }
+@keyframes yu-breathe { 0%, 100% { transform: translateY(0) scale(1, 1); } 50% { transform: translateY(-1.2px) scale(1.012, 1.008); } }
 #yu .yu-eyes { transform-origin: center; animation: yu-blink 5s infinite; }
 #yu .yu-flip-l { transform-origin: 80% 15%; transition: transform .3s; }
 #yu .yu-flip-r { transform-origin: 20% 15%; transition: transform .3s; }
@@ -49,7 +62,6 @@
 
 @keyframes yu-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-2px); } }
 @keyframes yu-blink { 0%, 93%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
-@keyframes yu-waddle { from { transform: rotate(-7deg); } to { transform: rotate(7deg); } }
 @keyframes yu-wave { 0%, 100% { transform: rotate(0); } 25%, 75% { transform: rotate(-55deg); } 50% { transform: rotate(-30deg); } }
 @keyframes yu-read { 0%, 40% { transform: translateX(-1.8px); } 50%, 90% { transform: translateX(1.8px); } 100% { transform: translateX(-1.8px); } }
 @keyframes yu-flip { 0% { transform: scaleX(1); } 50% { transform: scaleX(0); } 100% { transform: scaleX(-1); } }
@@ -69,7 +81,16 @@
 #yu[data-pose="sleep"] .yu-tuft { animation: none; transform: rotate(-30deg); }
 
 /* walking */
-#yu.walking .yu-body { animation: yu-waddle .32s ease-in-out infinite alternate; }
+/* calm waddle: small bob and sway, feet take turns */
+#yu.walking .yu-body { animation: yu-step .55s ease-in-out infinite alternate; }
+#yu.walking .yu-foot-l { animation: yu-foot .55s ease-in-out infinite alternate; }
+#yu.walking .yu-foot-r { animation: yu-foot .55s ease-in-out infinite alternate-reverse; }
+#yu.walking .yu-shadowel { animation: yu-shadow .55s ease-in-out infinite alternate; }
+@keyframes yu-step { 0% { transform: translateY(0) rotate(-2.5deg); } 50% { transform: translateY(-2.2px) rotate(0deg); } 100% { transform: translateY(0) rotate(2.5deg); } }
+@keyframes yu-foot { from { transform: translateY(0); } to { transform: translateY(-2.6px); } }
+@keyframes yu-shadow { from { transform: scaleX(1); } to { transform: scaleX(.92); } }
+@keyframes yu-shadowhop { 0%, 100% { transform: scale(1); opacity: 1; } 30% { transform: scale(.7); opacity: .6; } 55% { transform: scale(1); opacity: 1; } }
+#yu[data-pose="cheer"] .yu-shadowel { animation: yu-shadowhop .9s ease-out 1; }
 
 /* poses */
 #yu[data-pose="wave"] .yu-flip-r { animation: yu-wave 1.1s ease-in-out 1; }
@@ -142,6 +163,7 @@
 
 /* feedback form inside the bubble */
 #yu-bubble.wide { width: min(420px, calc(100vw - 32px)); }
+#yu-bubble { max-height: calc(100dvh - 130px - env(safe-area-inset-top, 0px)); overflow-y: auto; overscroll-behavior: contain; }
 .yu-form { display: grid; gap: 8px; }
 .yu-chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .yu-chip { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 5px 10px; font: 600 12.5px var(--f-body); cursor: pointer; }
