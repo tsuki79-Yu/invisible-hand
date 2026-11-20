@@ -7,5 +7,5 @@
    3. Paste it between the quotes below and save. Done.
    Free plan: 250 messages a month. */
 window.IH_CONFIG = {
-  feedbackKey: ''
+  feedbackKey: '91ca889c-0e31-4324-a145-34931e6c96d0'
 };
