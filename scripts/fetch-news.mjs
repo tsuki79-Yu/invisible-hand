@@ -1,7 +1,7 @@
 // Collects headlines (title, picture, link) from reliable news feeds.
 // Writes data/news.js. Run: node scripts/fetch-news.mjs
 // Only the headline, image and link are stored: readers click through to the original site.
-import { writeFile, mkdir } from 'node:fs/promises';
+import { writeFile, mkdir, readFile } from 'node:fs/promises';
 
 // Every source here is FREE to read (no subscription or paywall) and well established.
 // region: global | uz (Uzbekistan & Central Asia) | official (central banks & their research)
@@ -91,8 +91,19 @@ for (const f of FEEDS) {
     catch (e) { status[f.id] = 'error ' + e.message; await new Promise(r => setTimeout(r, 2000 * attempt)); }
   }
 }
+// Keep a 30-day archive: earlier headlines stay, so each "What stands out" note can link to a real,
+// on-topic article even when today's news doesn't cover it. Only sources still in the list are kept.
+const KEEP_DAYS = 30, MAX_ITEMS = 2500, ids = new Set(FEEDS.map(f => f.id));
+try {
+  const prev = JSON.parse((await readFile('data/news.js', 'utf8')).replace(/^[\s\S]*?window\.IH_NEWS = /, '').replace(/;\s*$/, ''));
+  items = items.concat((prev.items || []).filter(i => ids.has(i.s)));
+} catch { /* first run */ }
+const cutoff = Date.now() - KEEP_DAYS * 86400000;
 const seen = new Set();
-items = items.filter(i => (seen.has(i.u) ? false : seen.add(i.u))).sort((a, b) => b.d.localeCompare(a.d));
+items = items.filter(i => new Date(i.d).getTime() >= cutoff)
+  .filter(i => (seen.has(i.u) ? false : seen.add(i.u)))
+  .sort((a, b) => b.d.localeCompare(a.d))
+  .slice(0, MAX_ITEMS);
 
 const out = {
   updated: new Date().toISOString(),

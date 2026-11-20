@@ -205,6 +205,10 @@ main { padding-block: 28px 80px; }
 .signal p b { font-weight: 600; }
 .signal a.cite { color: var(--note); font-size: 13px; text-decoration: none; white-space: nowrap; }
 .signal a.cite:hover { text-decoration: underline; text-underline-offset: 3px; }
+.signal .relnews { display: block; margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line); font-size: 13.5px; color: var(--muted); }
+.signal .relnews a { color: var(--ink); text-decoration: none; font-weight: 500; }
+.signal .relnews a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.signal .relsrc { font: 500 12px var(--f-data); white-space: nowrap; }
 
 /* Spotlight */
 .spot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 14px; }

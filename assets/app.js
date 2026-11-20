@@ -186,14 +186,42 @@
 
   /* ---------------- Signals (computed from data) ---------------- */
   function avg(arr, from, to) { var s = 0, n = 0; for (var i = from; i <= to; i++) if (arr[i] != null) { s += arr[i]; n++; } return n ? s / n : null; }
-  // Link to the exact source of a figure, shown in brackets after each note
+  // Source of a figure, shown in brackets after each note. Links go to pages that reliably open:
+  // IMF figures -> the IMF's page for that country (its chart pages break when the IMF data service is down);
+  // World Bank figures -> the World Bank data page for that indicator and country.
   function srcLink(id, k, i) {
     var c = C.countries[id] || {}, code = C.codes && C.codes[k] ? C.codes[k] : {};
     if (srcAt(id, k, i) === 'i' && code.imf) {
-      return '<a class="cite" href="https://www.imf.org/external/datamapper/' + code.imf + '@WEO/' + (id === 'WLD' ? 'WEOWORLD' : id) + '" target="_blank" rel="noopener">(' + esc(L('IMF World Economic Outlook', 'IMF')) + (isEst(id, k, i) ? ', ' + esc(L('estimate', 'est.')) : '') + ' ↗)</a>';
+      var url = id === 'WLD' ? 'https://www.imf.org/en/Publications/WEO' : 'https://www.imf.org/en/Countries/' + id;
+      return '<a class="cite" href="' + url + '" target="_blank" rel="noopener">(' + esc(L('IMF World Economic Outlook', 'IMF')) + (isEst(id, k, i) ? ', ' + esc(L('estimate', 'est.')) : '') + ' ↗)</a>';
     }
     return '<a class="cite" href="https://data.worldbank.org/indicator/' + (code.wb || '') + (c.a2 && id !== 'WLD' ? '?locations=' + c.a2 : '') + '" target="_blank" rel="noopener">(' + esc(L('World Bank', 'World Bank')) + ' ↗)</a>';
   }
+
+  // A recent headline from our trusted sources about the same topic and country, if there is one
+  var TOPIC_WORDS = {
+    infl: /\binflation\b|consumer prices|\bcpi\b|cost of living/i,
+    growth: /\bgdp\b|economic growth|economy (grew|grows|expanded|expands|shrank|shrinks|contracted|contracts|slowed|slows)|\brecession\b/i,
+    fx: /exchange rate|devalu|depreciat|appreciat|against the dollar|\b(so.?m|tenge|rouble|ruble|yen|yuan|pound|rupee|lira)\b.*\b(falls?|weakens?|strengthens?|record|slumps?|rall(y|ies))/i,
+    gdppc: /per capita|living standards|average (income|wage|salary)|real wages|household incomes?/i,
+    unemp: /unemployment|jobless|labou?r market/i,
+    pop: /\bpopulation\b|\bcensus\b|birth rate/i
+  };
+  var DEMONYM = { UZB: 'uzbek', USA: 'us |u\\.s\\.|american|federal reserve|\\bfed\\b', GBR: 'uk |britain|british|bank of england', CHN: 'chinese', JPN: 'japanese', DEU: 'german', FRA: 'french', RUS: 'russian', KAZ: 'kazakh', KGZ: 'kyrgyz', TJK: 'tajik', TKM: 'turkmen', IND: 'indian', TUR: 'turkish', KOR: 'south korea', CAN: 'canadian', AUS: 'australian' };
+  function relatedNews(id, k) {
+    var re = TOPIC_WORDS[k]; if (!re || id === 'WLD') return null;
+    var c = C.countries[id] || {}, name = (c.n || '').split(',')[0].toLowerCase();
+    var who = new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + (DEMONYM[id] ? '|' + DEMONYM[id] : ''), 'i');
+    var best = null;
+    NEWS.items.forEach(function (n) {
+      var src = SRC[n.s] || {};
+      if (src.lang === 'ru' || !re.test(n.t)) return;
+      if (!who.test(' ' + n.t + ' ')) return;
+      if (!best || n.d > best.d) best = n;
+    });
+    return best;
+  }
+
   function signals(id) {
     var out = [], gz = state.lang === 'gz', name = cname(id);
     var inf = series(id, 'infl'), li = lastIdx(inf);
@@ -226,7 +254,12 @@
       var pop = series('WLD', 'pop'), lpp = lastIdx(pop);
       if (lpp > 10) out.push({ k: 'pop', i: lpp, c: 'watch', s: 1, h: '<b>The world added ' + ((pop[lpp] - pop[lpp - 10]) / 1e6).toFixed(0) + ' million people</b> between ' + yearOf(lpp - 10) + ' and ' + yearOf(lpp) + '.' });
     }
-    out.forEach(function (x) { if (x.k) x.h += ' ' + srcLink(id, x.k, x.i); });
+    out.forEach(function (x) {
+      if (!x.k) return;
+      x.h += ' ' + srcLink(id, x.k, x.i);
+      var n = relatedNews(id, x.k);
+      if (n) x.h += '<span class="relnews">' + esc(L('In the news', 'In the news')) + ': <a href="' + esc(n.u) + '" target="_blank" rel="noopener">' + esc(n.t) + ' ↗</a> <span class="relsrc">' + esc((SRC[n.s] || {}).name || n.s) + ' · ' + ago(n.d) + '</span></span>';
+    });
     out.sort(function (a, b) { return b.s - a.s; });
     if (!out.length) out.push({ c: '', s: 0, h: 'Not enough recent data for ' + esc(name) + ' to compare against its history.' });
     return out.slice(0, 4);
@@ -675,7 +708,9 @@
       [['all', t('fAll')], ['following', t('fFollowing') + ' (' + nFollow + ')'], ['global', t('fGlobal')], ['uz', t('fUz')], ['official', t('fOfficial')]].map(function (f) { return '<button type="button" class="chip" data-nf="' + f[0] + '" aria-pressed="' + (state.newsFilter === f[0]) + '">' + esc(f[1]) + '</button>'; }).join('') +
       '</div><div class="chips" aria-label="' + esc(t('sources')) + '">' + srcs.map(function (s) { return followBtn('src:' + s.id, s.name).replace(heart + (isFollowing('src:' + s.id) ? t('following') : t('follow')), heart + esc(s.name)); }).join('') + '</div></div>';
     var q = state.newsQuery.trim().toLowerCase();
+    var weekAgo = new Date(Date.now() - 7 * 86400000).toISOString();
     var items = rankedNews().filter(function (n) {
+      if (n.d < weekAgo) return false; // the News page shows the last 7 days; older headlines stay as an archive for related links
       var s = SRC[n.s] || {};
       if (state.newsFilter === 'following' && !isFollowing('src:' + n.s)) return false;
       if (state.newsFilter === 'global' && s.region !== 'global') return false;
