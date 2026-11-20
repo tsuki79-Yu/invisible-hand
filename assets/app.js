@@ -447,7 +447,7 @@
     function displace(px, py, now, R) {
       var dx = 0, dy = 0;
       for (var i = 0; i < waves.length; i++) {
-        var w = waves[i], age = (now - w.t) / 1000;
+        var w = waves[i], age = Math.max(0, now - w.t) / 1000;
         var vx = px - w.x, vy = py - w.y, d = Math.sqrt(vx * vx + vy * vy) || 1;
         var front = age * R * 0.85, band = R * 0.16, off = d - front;
         var g = Math.exp(-(off * off) / (2 * band * band));
@@ -458,6 +458,10 @@
     }
     function draw(now) {
       if (!cv.isConnected) return;
+      if (!reduceMotion) rosetteRAF = requestAnimationFrame(draw); // schedule the next frame first, so one bad frame can't stop it
+      try { paint(now); } catch (err) { waves = []; }
+    }
+    function paint(now) {
       var w = cv.width, h = cv.height, ph = reduceMotion ? 0 : (now - t0) / 9000;
       waves = waves.filter(function (wv) { return now - wv.t < WAVE_LIFE; });
       var active = waves.length > 0;
@@ -494,13 +498,12 @@
       }
       // soft rings spreading from where you clicked
       waves.forEach(function (wv) {
-        var age = (now - wv.t) / WAVE_LIFE, rad = (now - wv.t) / 1000 * R * 0.85;
+        var ms = Math.max(0, now - wv.t), age = ms / WAVE_LIFE, rad = Math.max(0, ms / 1000 * R * 0.85);
         ctx.globalAlpha = 0.45 * (1 - age); ctx.strokeStyle = gold; ctx.lineWidth = 1.4 * dpr;
         ctx.beginPath(); ctx.arc(wv.x, wv.y, rad, 0, Math.PI * 2); ctx.stroke();
         if (rad > R * 0.18) { ctx.globalAlpha = 0.25 * (1 - age); ctx.strokeStyle = ink; ctx.beginPath(); ctx.arc(wv.x, wv.y, rad - R * 0.18, 0, Math.PI * 2); ctx.stroke(); }
       });
       ctx.globalAlpha = 1; ctx.lineWidth = 0.8 * dpr;
-      if (!reduceMotion) rosetteRAF = requestAnimationFrame(draw);
     }
     rosetteRAF = requestAnimationFrame(draw);
     window.onresize = function () { size(); if (reduceMotion) draw(performance.now()); };
