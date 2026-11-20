@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-20T05:55:30.306Z",
+  "updated": "2026-11-20T06:13:51.664Z",
   "week": "20 November 2026",
   "picks": [
     {
@@ -41,19 +41,19 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "President Mirziyoyev orders tighter oversight of New Tashkent construction, offers tax breaks to investors",
-        "src": "Kun.uz",
-        "u": "https://kun.uz/en/news/2026/11/19/president-mirziyoyev-orders-tighter-oversight-of-new-tashkent-construction-offers-tax-breaks-to-investors-61341",
+        "t": "President of Uzbekistan invites Turkish businesses to increase investments in country",
+        "src": "Gazeta.uz",
+        "u": "https://www.gazeta.uz/en/2026/11/20/turkey/",
         "n": 3,
-        "term": "Construction"
+        "term": "Invites"
       },
       "quiet": {
         "t": "AI-92 prices climb as exchange sales shift toward more expensive K2-L grade",
         "src": "Kun.uz",
         "u": "https://kun.uz/en/news/2026/11/19/ai-92-prices-climb-as-exchange-sales-shift-toward-more-expensive-k2-l-grade-61371"
       },
-      "why": "In Uzbekistan and Central Asia, Construction is the story most outlets are running (3 outlets). Inflation decides how far every paycheque stretches and what the central bank does next. It shapes daily life long after the buzz around today's top story fades.",
-      "whyGz": "Back home, everyone's covering Construction. Inflation = how far your money goes. It hits everyone's wallet, so it matters way longer than today's drama.",
+      "why": "In Uzbekistan and Central Asia, Invites is the story most outlets are running (3 outlets). Inflation decides how far every paycheque stretches and what the central bank does next. It shapes daily life long after the buzz around today's top story fades.",
+      "whyGz": "Back home, everyone's covering Invites. Inflation = how far your money goes. It hits everyone's wallet, so it matters way longer than today's drama.",
       "topic": "inflation"
     }
   ]
