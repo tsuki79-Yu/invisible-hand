@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-21T07:14:41.421Z",
+  "updated": "2026-11-21T09:53:51.240Z",
   "week": "21 November 2026",
   "picks": [
     {
@@ -41,20 +41,20 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "Over 400 family polyclinics to be modernized in Samarkand region with World Bank support",
+        "t": "S&P improves Uzbekistan’s credit rating to BB+ — one step away from investment grade",
         "src": "Gazeta.uz",
-        "u": "https://www.gazeta.uz/en/2026/11/18/shifo-1/",
+        "u": "https://www.gazeta.uz/en/2026/11/21/sp-global-ratings/",
         "n": 4,
-        "term": "Bank"
+        "term": "Uzbekistans"
       },
       "quiet": {
-        "t": "Transmission line failure in Tajikistan disrupts electricity supply in Fergana Valley",
-        "src": "Kun.uz",
-        "u": "https://kun.uz/en/news/2026/11/19/transmission-line-failure-in-tajikistan-disrupts-electricity-supply-in-fergana-valley-61408"
+        "t": "Uzbekistan exports $40.4mn worth of watermelons to 15 countries in 9M26",
+        "src": "Daryo",
+        "u": "https://daryo.uz/en/2026/11/21/uzbekistan-exports-40-4mn-worth-of-watermelons-to-15-countries-in-9m26/"
       },
-      "why": "In Uzbekistan and Central Asia, Bank is the story most outlets are running (4 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
-      "whyGz": "Back home, everyone's covering Bank. Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
-      "topic": "market-failures"
+      "why": "In Uzbekistan and Central Asia, Uzbekistans is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
+      "whyGz": "Back home, everyone's covering Uzbekistans. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
+      "topic": "trade"
     }
   ]
 };
