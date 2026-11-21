@@ -173,7 +173,7 @@
   var basePose = 'idle', poseTimer = 0;
   function setPose(p) { yu.dataset.pose = p; }
   function flash(p, ms) { clearTimeout(poseTimer); setPose(p); poseTimer = setTimeout(function () { setPose(sleeping ? 'sleep' : basePose); }, ms || 1300); }
-  function poseFor(view) { return { news: 'paper', topic: 'read', library: 'read', films: 'popcorn' }[view] || 'idle'; }
+  function poseFor(view) { return { news: 'paper', topic: 'read', law: 'read', laws: 'read', library: 'read', films: 'popcorn' }[view] || 'idle'; }
   (function () { var h = location.hash.slice(1); basePose = poseFor(h.indexOf('topic-') === 0 ? 'topic' : h); setPose(basePose); })();
 
   /* ---------- speech bubble ---------- */

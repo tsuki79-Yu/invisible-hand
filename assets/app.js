@@ -37,7 +37,7 @@
   /* ---------------- Language ---------------- */
   var T = {
     en: {
-      navToday: 'Today', navLearn: 'Learn', navNews: 'News', navFilms: 'Films', navLibrary: 'Library', search: 'Search',
+      navToday: 'Today', navLearn: 'Learn', navLaws: 'Laws', navNews: 'News', navFilms: 'Films', navLibrary: 'Library', search: 'Search',
       heroTitle: 'The economy, <em>made clear.</em>',
       heroLede: 'Live figures for every country, news from trusted free sources, the big ideas with their history, classic papers, films and research tools. Free and open to everyone.',
       showMe: 'Show me', seminarOn: 'Presentation mode', seminarOff: 'Exit presentation mode',
@@ -64,7 +64,7 @@
       seminarHint: 'Big numbers for a projector or screen share.', learnMore: 'Learn more'
     },
     gz: {
-      navToday: 'Today', navLearn: 'Learn', navNews: 'The tea', navFilms: 'Movies', navLibrary: 'Toolkit', search: 'Search',
+      navToday: 'Today', navLearn: 'Learn', navLaws: 'Laws', navNews: 'The tea', navFilms: 'Movies', navLibrary: 'Toolkit', search: 'Search',
       heroTitle: 'The economy, <em>but make it make sense.</em>',
       heroLede: 'Real stats for every country, legit free news, big ideas with the backstory, papers, movies and tools. Free for everyone.',
       showMe: 'Spill the stats on', seminarOn: 'Presentation mode', seminarOff: 'Exit presentation mode',
@@ -831,6 +831,7 @@
       x.chain.forEach(function (c, i) { ix.push({ k: c.y, h: c.h, s: x.title + ' · ' + L('history', 'backstory'), href: '#topic-' + x.id, chain: [x.id, i], txt: c.y + ' ' + c.h + ' ' + c.t }); });
       x.papers.forEach(function (p) { ix.push({ k: L('Paper', 'Paper'), h: p.t, s: p.a + ' (' + p.y + ') · ' + p.j, href: p.url, ext: true, txt: p.t + ' ' + p.a + ' ' + p.y + ' ' + p.j }); });
     });
+    if (window.IH_LAWS) window.IH_LAWS.list.forEach(function (l) { ix.push({ k: L('Law', 'Law'), h: l.title, s: l.def, href: '#law-' + l.id, txt: l.title + ' ' + l.def + ' ' + l.real.join(' ') }); });
     CT.films.forEach(function (f) { ix.push({ k: L('Film', 'Movie'), h: f.t + ' (' + f.y + ')', s: f.c, href: '#films', txt: f.t + ' ' + f.c }); });
     COUNTRY_IDS.forEach(function (id) { ix.push({ k: L('Country', 'Country'), h: cname(id), s: (C.countries[id].r || '') + (C.countries[id].c ? ' · ' + C.countries[id].c : ''), country: id, href: '#today', txt: cname(id) + ' ' + id + ' ' + (C.countries[id].c || '') }); });
     NEWS.items.forEach(function (n) { ix.push({ k: L('News', 'News'), h: n.t, s: (SRC[n.s] || {}).name, href: n.u, ext: true, txt: n.t }); });
@@ -867,13 +868,13 @@
   function closeSearch() { $('#searchOverlay').hidden = true; }
 
   /* ---------------- Router ---------------- */
-  var VIEWS = ['today', 'learn', 'topic', 'news', 'films', 'library'];
+  var VIEWS = ['today', 'learn', 'topic', 'laws', 'law', 'news', 'films', 'library'];
   function route() {
     var h = (location.hash || '#today').slice(1);
-    var view = h.indexOf('topic-') === 0 ? 'topic' : (VIEWS.indexOf(h) >= 0 ? h : 'today');
+    var view = h.indexOf('topic-') === 0 ? 'topic' : h.indexOf('law-') === 0 ? 'law' : (VIEWS.indexOf(h) >= 0 ? h : 'today');
     VIEWS.forEach(function (v) { $('#view-' + v).hidden = v !== view; });
     $$('.tabs a').forEach(function (a) {
-      var on = a.dataset.route === view || (view === 'topic' && a.dataset.route === 'learn');
+      var on = a.dataset.route === view || (view === 'topic' && a.dataset.route === 'learn') || (view === 'law' && a.dataset.route === 'laws');
       if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
     });
     if (view === 'today') renderToday();
@@ -883,7 +884,13 @@
     if (view === 'news') renderNews();
     if (view === 'films') renderFilms();
     if (view === 'library') renderLibrary();
-    var title = { today: 'Invisible Hand', learn: 'Learn · Invisible Hand', news: 'News · Invisible Hand', films: 'Films · Invisible Hand', library: 'Library · Invisible Hand' }[view];
+    if (window.IH_LAWS) {
+      if (view !== 'law') window.IH_LAWS.stop();
+      if (view === 'laws') window.IH_LAWS.renderList($('#view-laws'), { L: L });
+      if (view === 'law') window.IH_LAWS.renderLaw($('#view-law'), h.slice(4), { L: L, topics: TOPIC });
+    }
+    var lawObj = view === 'law' && window.IH_LAWS ? window.IH_LAWS.list.filter(function (x) { return x.id === h.slice(4); })[0] : null;
+    var title = { today: 'Invisible Hand', laws: 'Laws · Invisible Hand', law: (lawObj ? lawObj.title : 'Laws') + ' · Invisible Hand', learn: 'Learn · Invisible Hand', news: 'News · Invisible Hand', films: 'Films · Invisible Hand', library: 'Library · Invisible Hand' }[view];
     document.title = view === 'topic' && TOPIC[h.slice(6)] ? TOPIC[h.slice(6)].title + ' · Invisible Hand' : title;
     emit('ih:route', { view: view, topic: view === 'topic' ? h.slice(6) : null });
   }

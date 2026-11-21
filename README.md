@@ -31,6 +31,7 @@ If the IMF data service is down, the updater uses its last saved copy (`data/imf
 | What | File |
 |---|---|
 | Topics, history chains, papers, quizzes, films, resources | `assets/content.js` |
+| Laws & principles (animated picture stories) | `assets/laws.js` |
 
 Edit any of these on GitHub with the pencil icon. The site updates within a minute or two.
 
