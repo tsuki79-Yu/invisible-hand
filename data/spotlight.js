@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-21T03:57:35.041Z",
+  "updated": "2026-11-21T07:14:41.421Z",
   "week": "21 November 2026",
   "picks": [
     {
@@ -31,29 +31,29 @@ window.IH_SPOTLIGHT = {
         "term": "Debut"
       },
       "quiet": {
-        "t": "Should AI be judging our credit worthiness?",
-        "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/c6d94pzk9vleo?at_medium=RSS&at_campaign=rss"
+        "t": "Soil degradation could cost the EU up to €509 billion over its next budget, campaigners warn",
+        "src": "Euronews Business",
+        "u": "https://www.euronews.com/2026/11/21/soil-degradation-could-cost-the-eu-up-to-509-billion-over-its-next-budget-campaigners-warn"
       },
-      "why": "Debut is all over the news today (5 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Debut story (5 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
-      "topic": "banking"
+      "why": "Debut is all over the news today (5 outlets). Pensions, savings and household debt decide people's financial security. They rarely trend, but they matter.",
+      "whyGz": "Everyone's on the Debut story (5 outlets). Pensions, savings, debt: not trending, but this is your actual future.",
+      "topic": "personal"
     },
     {
       "loud": {
-        "t": "Uzbekistan and Oman aim to increase trade turnover to $1 billion",
+        "t": "Over 400 family polyclinics to be modernized in Samarkand region with World Bank support",
         "src": "Gazeta.uz",
-        "u": "https://www.gazeta.uz/en/2026/11/18/forum/",
+        "u": "https://www.gazeta.uz/en/2026/11/18/shifo-1/",
         "n": 4,
-        "term": "Trade"
+        "term": "Bank"
       },
       "quiet": {
         "t": "Transmission line failure in Tajikistan disrupts electricity supply in Fergana Valley",
         "src": "Kun.uz",
         "u": "https://kun.uz/en/news/2026/11/19/transmission-line-failure-in-tajikistan-disrupts-electricity-supply-in-fergana-valley-61408"
       },
-      "why": "In Uzbekistan and Central Asia, Trade is the story most outlets are running (4 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
-      "whyGz": "Back home, everyone's covering Trade. Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
+      "why": "In Uzbekistan and Central Asia, Bank is the story most outlets are running (4 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
+      "whyGz": "Back home, everyone's covering Bank. Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
       "topic": "market-failures"
     }
   ]
