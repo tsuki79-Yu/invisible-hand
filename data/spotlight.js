@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-21T09:53:51.240Z",
+  "updated": "2026-11-21T13:00:34.361Z",
   "week": "21 November 2026",
   "picks": [
     {
@@ -41,20 +41,20 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "S&P improves Uzbekistan’s credit rating to BB+ — one step away from investment grade",
-        "src": "Gazeta.uz",
-        "u": "https://www.gazeta.uz/en/2026/11/21/sp-global-ratings/",
+        "t": "Uzbekistan and Afghanistan to negotiate water-sharing terms after Qosh Tepa Canal is completed",
+        "src": "Kun.uz",
+        "u": "https://kun.uz/en/news/2026/11/20/uzbekistan-and-afghanistan-to-negotiate-water-sharing-terms-after-qosh-tepa-canal-is-completed-61541",
         "n": 4,
-        "term": "Uzbekistans"
+        "term": "Afghanistan"
       },
       "quiet": {
-        "t": "Uzbekistan exports $40.4mn worth of watermelons to 15 countries in 9M26",
+        "t": "Uzbekistan receives over 9,000 dissertation attestation documents ahead of 2027 reforms",
         "src": "Daryo",
-        "u": "https://daryo.uz/en/2026/11/21/uzbekistan-exports-40-4mn-worth-of-watermelons-to-15-countries-in-9m26/"
+        "u": "https://daryo.uz/en/2026/11/21/uzbekistan-receives-over-9-000-dissertation-attestation-documents-ahead-of-2027-reforms/"
       },
-      "why": "In Uzbekistan and Central Asia, Uzbekistans is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
-      "whyGz": "Back home, everyone's covering Uzbekistans. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
-      "topic": "trade"
+      "why": "In Uzbekistan and Central Asia, Afghanistan is the story most outlets are running (4 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
+      "whyGz": "Back home, everyone's covering Afghanistan. This is the long game: investment and reforms decide how rich a country gets over decades.",
+      "topic": "growth"
     }
   ]
 };
