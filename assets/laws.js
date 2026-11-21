@@ -73,12 +73,12 @@
     slides: [
       { c: 'A village shares one pasture. Anyone can graze cows there for free.', g: 'One shared field. Free grazing for everyone.',
         s: function () { return ground(150) + A('a-fade', 0, box(14, 152, 372, 76, 'lw-grass', 18) + grassBlades(30, 380, 170)) +
-          A('a-up', 0.1, box(26, 96, 4, 58, 'lw-ink', 1) + box(10, 84, 92, 24, 'lw-paper lw-outline', 5) + T(56, 100, 'Common land', { size: 11, weight: 700 })) +
-          [130, 200, 270, 340].map(function (x, i) { return A('a-up', 0.2 + i * 0.12, person(x, 150, 'lw-note')) + A('a-pop', 0.5 + i * 0.12, cow(x - 6, 205, 0.9)); }).join(''); } },
+          A('a-up', 0.1, box(26, 76, 4, 78, 'lw-ink', 1) + box(10, 62, 92, 24, 'lw-paper lw-outline', 5) + T(56, 78, 'Common land', { size: 11, weight: 700 })) +
+          [75, 165, 255, 345].map(function (x, i) { return A('a-up', 0.2 + i * 0.12, person(x, 150, 'lw-note')) + A('a-pop', 0.5 + i * 0.12, cow(x - 17, 212, 0.85)); }).join(''); } },
       { c: 'Each herder thinks: "One more cow means more milk for me, and the grass it eats is shared by everyone."', g: 'Each herder: "one more cow = more milk for ME, grass cost is everyone\'s problem."',
         s: function () { return ground(150) + box(14, 152, 372, 76, 'lw-grass', 18) + grassBlades(30, 380, 170) +
-          [130, 200, 270, 340].map(function (x) { return person(x, 150, 'lw-note') + cow(x - 6, 205, 0.9); }).join('') +
-          [130, 200, 270, 340].map(function (x, i) { return A('a-pop', 0.3 + i * 0.15, cow(x + 20, 190, 0.8)); }).join('') +
+          [75, 165, 255, 345].map(function (x) { return person(x, 150, 'lw-note') + cow(x - 17, 212, 0.85); }).join('') +
+          [75, 165, 255, 345].map(function (x, i) { return A('a-pop', 0.3 + i * 0.15, cow(x + 21, 190, 0.8)); }).join('') +
           A('a-pop', 0.1, bubble(150, 40, 150, 34, '+1 cow = more milk for me!')); } },
       { c: 'Everyone thinks the same way. Too many cows eat the grass faster than it can grow back.', g: 'Everyone had the same idea. Grass can\'t keep up.',
         s: function () { var cows = ''; for (var i = 0; i < 14; i++) cows += A('a-pop', 0.05 * i, cow(34 + (i % 7) * 52 + (i > 6 ? 22 : 0), 188 + (i > 6 ? 26 : 0), 0.8));
