@@ -2,12 +2,12 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-20T21:54:47.609Z",
-  "week": "20 November 2026",
+  "updated": "2026-11-21T01:16:06.843Z",
+  "week": "21 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "Anthropic shares fall after blockbuster opening as wider tech sell-off continues",
+        "t": "Tech stock sell-off drags markets down as Anthropic shares slide",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
         "n": 8,
@@ -24,19 +24,19 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "Anthropic's record IPO lands as Nvidia suffers its worst run since 2008",
-        "src": "Euronews Business",
-        "u": "https://www.euronews.com/2026/11/19/anthropics-record-ipo-lands-as-nvidia-suffers-its-worst-run-since-2008",
+        "t": "Anthropic’s historic stock market debut: key takeaways, and what comes next for the AI industry",
+        "src": "The Guardian",
+        "u": "https://www.theguardian.com/technology/2026/nov/20/anthropic-ipo-historic-stock-market-debut-key-takeaways-what-next-for-ai",
         "n": 5,
-        "term": "Ipo"
+        "term": "Debut"
       },
       "quiet": {
         "t": "Should AI be judging our credit worthiness?",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/c6d94pzk9vleo?at_medium=RSS&at_campaign=rss"
       },
-      "why": "Ipo is all over the news today (5 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Ipo story (5 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "why": "Debut is all over the news today (5 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Debut story (5 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
       "topic": "banking"
     },
     {
