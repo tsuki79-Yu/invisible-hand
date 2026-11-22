@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-22T03:58:38.803Z",
+  "updated": "2026-11-22T07:15:53.592Z",
   "week": "22 November 2026",
   "picks": [
     {
@@ -41,19 +41,19 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "Uzbekistan and Afghanistan to negotiate water-sharing terms after Qosh Tepa Canal is completed",
-        "src": "Kun.uz",
-        "u": "https://kun.uz/en/news/2026/11/20/uzbekistan-and-afghanistan-to-negotiate-water-sharing-terms-after-qosh-tepa-canal-is-completed-61541",
+        "t": "S&P improves Uzbekistan’s credit rating to BB+ — one step away from investment grade",
+        "src": "Gazeta.uz",
+        "u": "https://www.gazeta.uz/en/2026/11/21/sp-global-ratings/",
         "n": 4,
-        "term": "Afghanistan"
+        "term": "Uzbekistans"
       },
       "quiet": {
         "t": "Uzbekistan receives over 9,000 dissertation attestation documents ahead of 2027 reforms",
         "src": "Daryo",
         "u": "https://daryo.uz/en/2026/11/21/uzbekistan-receives-over-9-000-dissertation-attestation-documents-ahead-of-2027-reforms/"
       },
-      "why": "In Uzbekistan and Central Asia, Afghanistan is the story most outlets are running (4 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
-      "whyGz": "Back home, everyone's covering Afghanistan. This is the long game: investment and reforms decide how rich a country gets over decades.",
+      "why": "In Uzbekistan and Central Asia, Uzbekistans is the story most outlets are running (4 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
+      "whyGz": "Back home, everyone's covering Uzbekistans. This is the long game: investment and reforms decide how rich a country gets over decades.",
       "topic": "growth"
     }
   ]
