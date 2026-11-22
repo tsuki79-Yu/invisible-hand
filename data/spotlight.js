@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-22T07:15:53.592Z",
+  "updated": "2026-11-22T09:53:18.571Z",
   "week": "22 November 2026",
   "picks": [
     {
@@ -14,9 +14,9 @@ window.IH_SPOTLIGHT = {
         "term": "Tech"
       },
       "quiet": {
-        "t": "Impunity fuels surge in settler violence across occupied West Bank",
+        "t": "Can Africa’s new credit rating agency change how the continent is assessed?",
         "src": "Al Jazeera",
-        "u": "https://www.aljazeera.com/video/newsfeed/2026/11/21/impunity-fuels-surge-in-settler-violence-across-occupied-west-bank?traffic_source=rss"
+        "u": "https://www.aljazeera.com/news/2026/11/21/can-africas-new-credit-rating-agency-change-how-the-continent-is-assessed?traffic_source=rss"
       },
       "why": "Tech is all over the news today (5 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
       "whyGz": "Everyone's on the Tech story (5 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
