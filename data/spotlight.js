@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-22T09:53:18.571Z",
+  "updated": "2026-11-22T12:59:13.009Z",
   "week": "22 November 2026",
   "picks": [
     {
@@ -14,9 +14,9 @@ window.IH_SPOTLIGHT = {
         "term": "Tech"
       },
       "quiet": {
-        "t": "Can Africa’s new credit rating agency change how the continent is assessed?",
-        "src": "Al Jazeera",
-        "u": "https://www.aljazeera.com/news/2026/11/21/can-africas-new-credit-rating-agency-change-how-the-continent-is-assessed?traffic_source=rss"
+        "t": "He expected a small-business loan. It turned out to be a trap",
+        "src": "NPR Economy",
+        "u": "https://www.npr.org/2026/11/22/nx-s1-5752261/small-business-loan-merchant-cash-advance"
       },
       "why": "Tech is all over the news today (5 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
       "whyGz": "Everyone's on the Tech story (5 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
@@ -48,13 +48,13 @@ window.IH_SPOTLIGHT = {
         "term": "Uzbekistans"
       },
       "quiet": {
-        "t": "Uzbekistan receives over 9,000 dissertation attestation documents ahead of 2027 reforms",
-        "src": "Daryo",
-        "u": "https://daryo.uz/en/2026/11/21/uzbekistan-receives-over-9-000-dissertation-attestation-documents-ahead-of-2027-reforms/"
+        "t": "OTP Group to acquire remaining state stake in Ipoteka Bank",
+        "src": "Gazeta.uz",
+        "u": "https://www.gazeta.uz/en/2026/11/22/ipoteka-bank/"
       },
-      "why": "In Uzbekistan and Central Asia, Uzbekistans is the story most outlets are running (4 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
-      "whyGz": "Back home, everyone's covering Uzbekistans. This is the long game: investment and reforms decide how rich a country gets over decades.",
-      "topic": "growth"
+      "why": "In Uzbekistan and Central Asia, Uzbekistans is the story most outlets are running (4 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Back home, everyone's covering Uzbekistans. Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "topic": "banking"
     }
   ]
 };
