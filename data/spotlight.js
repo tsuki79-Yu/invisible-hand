@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-22T01:12:22.323Z",
+  "updated": "2026-11-22T03:29:59.197Z",
   "week": "22 November 2026",
   "picks": [
     {
@@ -10,7 +10,7 @@ window.IH_SPOTLIGHT = {
         "t": "Tech stock sell-off drags markets down as Anthropic shares slide",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
-        "n": 6,
+        "n": 5,
         "term": "Tech"
       },
       "quiet": {
@@ -18,8 +18,8 @@ window.IH_SPOTLIGHT = {
         "src": "Al Jazeera",
         "u": "https://www.aljazeera.com/video/newsfeed/2026/11/21/impunity-fuels-surge-in-settler-violence-across-occupied-west-bank?traffic_source=rss"
       },
-      "why": "Tech is all over the news today (6 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Tech story (6 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "why": "Tech is all over the news today (5 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Tech story (5 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
       "topic": "banking"
     },
     {
@@ -31,13 +31,13 @@ window.IH_SPOTLIGHT = {
         "term": "Data"
       },
       "quiet": {
-        "t": "Federal Reserve announces College Fed Challenge winners",
-        "src": "Federal Reserve",
-        "u": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm"
+        "t": "30,000-hectare carbon forestry project shoots up on remote island",
+        "src": "ABC News Business",
+        "u": "https://www.abc.net.au/news/2026-11-22/new-chapter-for-tiwi-forestry-with-eucalyptus-pellita-plantation/107369820"
       },
-      "why": "Data is all over the news today (4 outlets). Interest rate decisions change the cost of every loan, mortgage and savings account. They move economies slowly, but for years.",
-      "whyGz": "Everyone's on the Data story (4 outlets). Rates decide what your loans cost and what your savings earn. Slow burn, huge impact.",
-      "topic": "central-banks"
+      "why": "Data is all over the news today (4 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
+      "whyGz": "Everyone's on the Data story (4 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
+      "topic": "market-failures"
     },
     {
       "loud": {
