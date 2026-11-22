@@ -2,41 +2,41 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-22T18:54:55.457Z",
+  "updated": "2026-11-22T21:50:14.288Z",
   "week": "22 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "Tech stock sell-off drags markets down as Anthropic shares slide",
-        "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
-        "n": 4,
-        "term": "Tech"
+        "t": "What's next after a brutal stock plunge we might have seen coming",
+        "src": "NPR Economy",
+        "u": "https://www.npr.org/2026/11/21/nx-s1-6049146/whats-next-after-a-brutal-stock-plunge-we-might-have-seen-coming",
+        "n": 3,
+        "term": "Next"
       },
       "quiet": {
         "t": "Centrica boss says he is 'hugely concerned' over impact of soaring energy bills",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/c6jre7gpdw13o?at_medium=RSS&at_campaign=rss"
       },
-      "why": "Tech is all over the news today (4 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
-      "whyGz": "Everyone's on the Tech story (4 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
+      "why": "Next is all over the news today (3 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
+      "whyGz": "Everyone's on the Next story (3 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
       "topic": "market-failures"
     },
     {
       "loud": {
-        "t": "Trump threatens ban on US firms building AI data centres overseas",
+        "t": "Tech stock sell-off drags markets down as Anthropic shares slide",
         "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/cmde1lw9y54ko?at_medium=RSS&at_campaign=rss",
-        "n": 4,
-        "term": "Data"
+        "u": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
+        "n": 3,
+        "term": "Tech"
       },
       "quiet": {
         "t": "He expected a small-business loan. He got a 7-year nightmare",
         "src": "NPR Economy",
         "u": "https://www.npr.org/2026/11/22/nx-s1-5752261/small-business-loan-merchant-cash-advance"
       },
-      "why": "Data is all over the news today (4 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Data story (4 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "why": "Tech is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Tech story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
       "topic": "banking"
     },
     {
