@@ -2,24 +2,24 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-21T21:47:27.718Z",
-  "week": "21 November 2026",
+  "updated": "2026-11-22T01:12:22.323Z",
+  "week": "22 November 2026",
   "picks": [
     {
       "loud": {
         "t": "Tech stock sell-off drags markets down as Anthropic shares slide",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
-        "n": 7,
-        "term": "Anthropic"
+        "n": 6,
+        "term": "Tech"
       },
       "quiet": {
         "t": "Impunity fuels surge in settler violence across occupied West Bank",
         "src": "Al Jazeera",
         "u": "https://www.aljazeera.com/video/newsfeed/2026/11/21/impunity-fuels-surge-in-settler-violence-across-occupied-west-bank?traffic_source=rss"
       },
-      "why": "Anthropic is all over the news today (7 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Anthropic story (7 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "why": "Tech is all over the news today (6 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Tech story (6 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
       "topic": "banking"
     },
     {
@@ -31,9 +31,9 @@ window.IH_SPOTLIGHT = {
         "term": "Data"
       },
       "quiet": {
-        "t": "Peterson: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means",
-        "src": "CNBC",
-        "u": "https://www.cnbc.com/2026/11/16/kevin-warsh-fed-ai-jobs-productivity-interest-rateshtml.html"
+        "t": "Federal Reserve announces College Fed Challenge winners",
+        "src": "Federal Reserve",
+        "u": "https://www.federalreserve.gov/newsevents/pressreleases/other20261120b.htm"
       },
       "why": "Data is all over the news today (4 outlets). Interest rate decisions change the cost of every loan, mortgage and savings account. They move economies slowly, but for years.",
       "whyGz": "Everyone's on the Data story (4 outlets). Rates decide what your loans cost and what your savings earn. Slow burn, huge impact.",
