@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-22T12:59:13.009Z",
+  "updated": "2026-11-22T15:52:14.753Z",
   "week": "22 November 2026",
   "picks": [
     {
@@ -10,16 +10,16 @@ window.IH_SPOTLIGHT = {
         "t": "Tech stock sell-off drags markets down as Anthropic shares slide",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
-        "n": 5,
+        "n": 4,
         "term": "Tech"
       },
       "quiet": {
-        "t": "He expected a small-business loan. It turned out to be a trap",
+        "t": "He expected a small-business loan. He got a 7-year nightmare",
         "src": "NPR Economy",
         "u": "https://www.npr.org/2026/11/22/nx-s1-5752261/small-business-loan-merchant-cash-advance"
       },
-      "why": "Tech is all over the news today (5 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Tech story (5 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "why": "Tech is all over the news today (4 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Tech story (4 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
       "topic": "banking"
     },
     {
@@ -31,9 +31,9 @@ window.IH_SPOTLIGHT = {
         "term": "Data"
       },
       "quiet": {
-        "t": "30,000-hectare carbon forestry project shoots up on remote island",
-        "src": "ABC News Business",
-        "u": "https://www.abc.net.au/news/2026-11-22/new-chapter-for-tiwi-forestry-with-eucalyptus-pellita-plantation/107369820"
+        "t": "Centrica boss says he is 'hugely concerned' over impact of soaring energy bills",
+        "src": "BBC Business",
+        "u": "https://www.bbc.co.uk/news/articles/c6jre7gpdw13o?at_medium=RSS&at_campaign=rss"
       },
       "why": "Data is all over the news today (4 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
       "whyGz": "Everyone's on the Data story (4 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
