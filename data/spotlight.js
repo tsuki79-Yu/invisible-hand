@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-23T07:41:54.619Z",
+  "updated": "2026-11-23T10:20:09.904Z",
   "week": "23 November 2026",
   "picks": [
     {
@@ -21,6 +21,23 @@ window.IH_SPOTLIGHT = {
       "why": "Crash is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
       "whyGz": "Everyone's on the Crash story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
       "topic": "banking"
+    },
+    {
+      "loud": {
+        "t": "Is Europe ready to judge workers by skills, not just diplomas? Who leads skills-first hiring?",
+        "src": "Euronews Business",
+        "u": "https://www.euronews.com/2026/11/22/is-europe-ready-to-judge-workers-by-skills-not-just-diplomas-who-leads-skills-first-hiring",
+        "n": 3,
+        "term": "Workers"
+      },
+      "quiet": {
+        "t": "Jim Chalmers says he doesn't expect a recession, but 'things might get a bit harder'",
+        "src": "ABC News Business",
+        "u": "https://www.abc.net.au/news/2026-11-23/chalmers-flags-net-spending-cuts-in-mid-year-budget/107417628"
+      },
+      "why": "Workers is all over the news today (3 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
+      "whyGz": "Everyone's on the Workers story (3 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
+      "topic": "gdp"
     },
     {
       "loud": {
