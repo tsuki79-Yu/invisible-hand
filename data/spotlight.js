@@ -2,42 +2,42 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-23T19:08:22.749Z",
+  "updated": "2026-11-23T21:57:54.192Z",
   "week": "23 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "Nvidia shares up nearly 33% and tech stocks rally after Jensen Huang returns",
+        "t": "Nvidia value climbs by almost $1tn and tech stocks rally after Jensen Huang returns",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/cq62pn6j42jko?at_medium=RSS&at_campaign=rss",
-        "n": 4,
-        "term": "Nvidia"
+        "n": 6,
+        "term": "Jensen"
       },
       "quiet": {
         "t": "Why is Bangladesh’s Grameen Bank under attack?",
         "src": "Al Jazeera",
         "u": "https://www.aljazeera.com/news/2026/11/23/why-is-bangladeshs-grameen-bank-under-attack?traffic_source=rss"
       },
-      "why": "Nvidia is all over the news today (4 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Nvidia story (4 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "why": "Jensen is all over the news today (6 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Jensen story (6 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
       "topic": "banking"
     },
     {
       "loud": {
-        "t": "Danish top court’s ‘ghetto law’ ruling supports hardline immigration policy",
-        "src": "Al Jazeera",
-        "u": "https://www.aljazeera.com/news/2026/11/23/danish-top-courts-ghetto-law-ruling-supports-hardline-immigration-policy?traffic_source=rss",
+        "t": "South Korea and China agree wider trade deal covering entertainment",
+        "src": "Euronews Business",
+        "u": "https://www.euronews.com/2026/11/23/south-korea-and-china-agree-wider-trade-deal-covering-entertainment",
         "n": 3,
-        "term": "Policy"
+        "term": "China"
       },
       "quiet": {
-        "t": "Capita shares plunge 70% as boss quits after civil service pensions failure",
-        "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/c65y1qqw3kjxo?at_medium=RSS&at_campaign=rss"
+        "t": "Jim Chalmers says he doesn't expect a recession, but 'things might get a bit harder'",
+        "src": "ABC News Business",
+        "u": "https://www.abc.net.au/news/2026-11-23/chalmers-flags-net-spending-cuts-in-mid-year-budget/107417628"
       },
-      "why": "Policy is all over the news today (3 outlets). Pensions, savings and household debt decide people's financial security. They rarely trend, but they matter.",
-      "whyGz": "Everyone's on the Policy story (3 outlets). Pensions, savings, debt: not trending, but this is your actual future.",
-      "topic": "personal"
+      "why": "China is all over the news today (3 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
+      "whyGz": "Everyone's on the China story (3 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
+      "topic": "gdp"
     },
     {
       "loud": {
