@@ -2,9 +2,26 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-23T13:26:26.620Z",
+  "updated": "2026-11-23T16:15:44.324Z",
   "week": "23 November 2026",
   "picks": [
+    {
+      "loud": {
+        "t": "How important are Nvidia and Jensen Huang to the US economy?",
+        "src": "BBC Business",
+        "u": "https://www.bbc.co.uk/news/articles/c68798vdprwpo?at_medium=RSS&at_campaign=rss",
+        "n": 3,
+        "term": "Nvidia"
+      },
+      "quiet": {
+        "t": "Why is Bangladesh’s Grameen Bank under attack?",
+        "src": "Al Jazeera",
+        "u": "https://www.aljazeera.com/news/2026/11/23/why-is-bangladeshs-grameen-bank-under-attack?traffic_source=rss"
+      },
+      "why": "Nvidia is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Nvidia story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "topic": "banking"
+    },
     {
       "loud": {
         "t": "South East Water reports loss after supply issues",
@@ -14,29 +31,12 @@ window.IH_SPOTLIGHT = {
         "term": "Supply"
       },
       "quiet": {
-        "t": "Why is Bangladesh’s Grameen Bank under attack?",
-        "src": "Al Jazeera",
-        "u": "https://www.aljazeera.com/news/2026/11/23/why-is-bangladeshs-grameen-bank-under-attack?traffic_source=rss"
-      },
-      "why": "Supply is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Supply story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
-      "topic": "banking"
-    },
-    {
-      "loud": {
-        "t": "From Wall Street to Main Street, how artificial intelligence is affecting the economy",
-        "src": "NPR Economy",
-        "u": "https://www.npr.org/2026/11/23/nx-s1-6048690/from-wall-street-to-main-street-how-artificial-intelligence-is-affecting-the-economy",
-        "n": 3,
-        "term": "Wall"
-      },
-      "quiet": {
         "t": "Capita shares plunge 70% as boss quits after civil service pensions failure",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/c65y1qqw3kjxo?at_medium=RSS&at_campaign=rss"
       },
-      "why": "Wall is all over the news today (3 outlets). Pensions, savings and household debt decide people's financial security. They rarely trend, but they matter.",
-      "whyGz": "Everyone's on the Wall story (3 outlets). Pensions, savings, debt: not trending, but this is your actual future.",
+      "why": "Supply is all over the news today (3 outlets). Pensions, savings and household debt decide people's financial security. They rarely trend, but they matter.",
+      "whyGz": "Everyone's on the Supply story (3 outlets). Pensions, savings, debt: not trending, but this is your actual future.",
       "topic": "personal"
     },
     {
