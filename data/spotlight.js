@@ -2,15 +2,15 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-23T16:15:44.324Z",
+  "updated": "2026-11-23T19:08:22.749Z",
   "week": "23 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "How important are Nvidia and Jensen Huang to the US economy?",
+        "t": "Nvidia shares up nearly 33% and tech stocks rally after Jensen Huang returns",
         "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/c68798vdprwpo?at_medium=RSS&at_campaign=rss",
-        "n": 3,
+        "u": "https://www.bbc.co.uk/news/articles/cq62pn6j42jko?at_medium=RSS&at_campaign=rss",
+        "n": 4,
         "term": "Nvidia"
       },
       "quiet": {
@@ -18,25 +18,25 @@ window.IH_SPOTLIGHT = {
         "src": "Al Jazeera",
         "u": "https://www.aljazeera.com/news/2026/11/23/why-is-bangladeshs-grameen-bank-under-attack?traffic_source=rss"
       },
-      "why": "Nvidia is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Nvidia story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "why": "Nvidia is all over the news today (4 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Nvidia story (4 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
       "topic": "banking"
     },
     {
       "loud": {
-        "t": "South East Water reports loss after supply issues",
-        "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/c6n90j1qxel8o?at_medium=RSS&at_campaign=rss",
+        "t": "Danish top court’s ‘ghetto law’ ruling supports hardline immigration policy",
+        "src": "Al Jazeera",
+        "u": "https://www.aljazeera.com/news/2026/11/23/danish-top-courts-ghetto-law-ruling-supports-hardline-immigration-policy?traffic_source=rss",
         "n": 3,
-        "term": "Supply"
+        "term": "Policy"
       },
       "quiet": {
         "t": "Capita shares plunge 70% as boss quits after civil service pensions failure",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/c65y1qqw3kjxo?at_medium=RSS&at_campaign=rss"
       },
-      "why": "Supply is all over the news today (3 outlets). Pensions, savings and household debt decide people's financial security. They rarely trend, but they matter.",
-      "whyGz": "Everyone's on the Supply story (3 outlets). Pensions, savings, debt: not trending, but this is your actual future.",
+      "why": "Policy is all over the news today (3 outlets). Pensions, savings and household debt decide people's financial security. They rarely trend, but they matter.",
+      "whyGz": "Everyone's on the Policy story (3 outlets). Pensions, savings, debt: not trending, but this is your actual future.",
       "topic": "personal"
     },
     {
