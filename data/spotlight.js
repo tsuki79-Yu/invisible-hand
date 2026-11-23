@@ -2,42 +2,42 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-23T10:20:09.904Z",
+  "updated": "2026-11-23T13:26:26.620Z",
   "week": "23 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
+        "t": "South East Water reports loss after supply issues",
         "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/cqe9k09j9jv4o?at_medium=RSS&at_campaign=rss",
+        "u": "https://www.bbc.co.uk/news/articles/c6n90j1qxel8o?at_medium=RSS&at_campaign=rss",
         "n": 3,
-        "term": "Crash"
+        "term": "Supply"
       },
       "quiet": {
-        "t": "He expected a small-business loan. He got a 7-year nightmare",
-        "src": "NPR Economy",
-        "u": "https://www.npr.org/2026/11/22/nx-s1-5752261/small-business-loan-merchant-cash-advance"
+        "t": "Why is Bangladesh’s Grameen Bank under attack?",
+        "src": "Al Jazeera",
+        "u": "https://www.aljazeera.com/news/2026/11/23/why-is-bangladeshs-grameen-bank-under-attack?traffic_source=rss"
       },
-      "why": "Crash is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Crash story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "why": "Supply is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Supply story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
       "topic": "banking"
     },
     {
       "loud": {
-        "t": "Is Europe ready to judge workers by skills, not just diplomas? Who leads skills-first hiring?",
-        "src": "Euronews Business",
-        "u": "https://www.euronews.com/2026/11/22/is-europe-ready-to-judge-workers-by-skills-not-just-diplomas-who-leads-skills-first-hiring",
+        "t": "From Wall Street to Main Street, how artificial intelligence is affecting the economy",
+        "src": "NPR Economy",
+        "u": "https://www.npr.org/2026/11/23/nx-s1-6048690/from-wall-street-to-main-street-how-artificial-intelligence-is-affecting-the-economy",
         "n": 3,
-        "term": "Workers"
+        "term": "Wall"
       },
       "quiet": {
-        "t": "Jim Chalmers says he doesn't expect a recession, but 'things might get a bit harder'",
-        "src": "ABC News Business",
-        "u": "https://www.abc.net.au/news/2026-11-23/chalmers-flags-net-spending-cuts-in-mid-year-budget/107417628"
+        "t": "Capita shares plunge 70% as boss quits after civil service pensions failure",
+        "src": "BBC Business",
+        "u": "https://www.bbc.co.uk/news/articles/c65y1qqw3kjxo?at_medium=RSS&at_campaign=rss"
       },
-      "why": "Workers is all over the news today (3 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
-      "whyGz": "Everyone's on the Workers story (3 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
-      "topic": "gdp"
+      "why": "Wall is all over the news today (3 outlets). Pensions, savings and household debt decide people's financial security. They rarely trend, but they matter.",
+      "whyGz": "Everyone's on the Wall story (3 outlets). Pensions, savings, debt: not trending, but this is your actual future.",
+      "topic": "personal"
     },
     {
       "loud": {
@@ -48,13 +48,13 @@ window.IH_SPOTLIGHT = {
         "term": "Uzbekistans"
       },
       "quiet": {
-        "t": "Tashkent police uncover illegal call center accused of stealing $200,000 in cryptocurrency",
-        "src": "Kun.uz",
-        "u": "https://kun.uz/en/news/2026/11/23/tashkent-police-uncover-illegal-call-center-accused-of-stealing-200000-in-cryptocurrency-61857"
+        "t": "OYAK CEO names three reasons to invest in Uzbekistan",
+        "src": "UzA",
+        "u": "https://uza.uz/en/posts/oyak-ceo-names-three-reasons-to-invest-in-uzbekistan_942483"
       },
-      "why": "In Uzbekistan and Central Asia, Uzbekistans is the story most outlets are running (5 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
-      "whyGz": "Back home, everyone's covering Uzbekistans. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
-      "topic": "trade"
+      "why": "In Uzbekistan and Central Asia, Uzbekistans is the story most outlets are running (5 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
+      "whyGz": "Back home, everyone's covering Uzbekistans. This is the long game: investment and reforms decide how rich a country gets over decades.",
+      "topic": "growth"
     }
   ]
 };
