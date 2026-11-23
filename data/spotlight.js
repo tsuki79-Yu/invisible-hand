@@ -2,9 +2,26 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-22T21:50:14.288Z",
-  "week": "22 November 2026",
+  "updated": "2026-11-23T01:19:50.534Z",
+  "week": "23 November 2026",
   "picks": [
+    {
+      "loud": {
+        "t": "San Francisco is enjoying an AI boom, but worries about a crash are growing",
+        "src": "BBC Business",
+        "u": "https://www.bbc.co.uk/news/articles/cqe9k09j9jv4o?at_medium=RSS&at_campaign=rss",
+        "n": 3,
+        "term": "Crash"
+      },
+      "quiet": {
+        "t": "He expected a small-business loan. He got a 7-year nightmare",
+        "src": "NPR Economy",
+        "u": "https://www.npr.org/2026/11/22/nx-s1-5752261/small-business-loan-merchant-cash-advance"
+      },
+      "why": "Crash is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Crash story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "topic": "banking"
+    },
     {
       "loud": {
         "t": "What's next after a brutal stock plunge we might have seen coming",
@@ -14,30 +31,13 @@ window.IH_SPOTLIGHT = {
         "term": "Next"
       },
       "quiet": {
-        "t": "Centrica boss says he is 'hugely concerned' over impact of soaring energy bills",
+        "t": "Energy bills will soar - here's how you can ease the pain",
         "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/c6jre7gpdw13o?at_medium=RSS&at_campaign=rss"
+        "u": "https://www.bbc.co.uk/news/articles/crm4rygl4m3o?at_medium=RSS&at_campaign=rss"
       },
       "why": "Next is all over the news today (3 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
       "whyGz": "Everyone's on the Next story (3 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
       "topic": "market-failures"
-    },
-    {
-      "loud": {
-        "t": "Tech stock sell-off drags markets down as Anthropic shares slide",
-        "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss",
-        "n": 3,
-        "term": "Tech"
-      },
-      "quiet": {
-        "t": "He expected a small-business loan. He got a 7-year nightmare",
-        "src": "NPR Economy",
-        "u": "https://www.npr.org/2026/11/22/nx-s1-5752261/small-business-loan-merchant-cash-advance"
-      },
-      "why": "Tech is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Tech story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
-      "topic": "banking"
     },
     {
       "loud": {
