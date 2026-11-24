@@ -2,41 +2,41 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-24T04:06:06.034Z",
+  "updated": "2026-11-24T07:24:52.277Z",
   "week": "24 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "Nvidia reinstates CEO Jensen Huang after affair with alleged spy as Trump says 'I made the deal'",
+        "t": "Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
-        "n": 7,
+        "n": 8,
         "term": "Nvidia"
       },
       "quiet": {
-        "t": "A slash-and-burn budget update could push Australia into a recession. Jim Chalmers has a fine line to tread | Patrick Commins",
-        "src": "The Guardian",
-        "u": "https://www.theguardian.com/business/2026/nov/24/mid-year-budget-cuts-recession-inflation-unemployment-australia-jim-chalmers"
+        "t": "Britain's landlords are getting bigger. A two-tier rental market may follow",
+        "src": "BBC Business",
+        "u": "https://www.bbc.co.uk/news/articles/c6n90g2l82d1o?at_medium=RSS&at_campaign=rss"
       },
-      "why": "Nvidia is all over the news today (7 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
-      "whyGz": "Everyone's on the Nvidia story (7 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
-      "topic": "gdp"
+      "why": "Nvidia is all over the news today (8 outlets). Pensions, savings and household debt decide people's financial security. They rarely trend, but they matter.",
+      "whyGz": "Everyone's on the Nvidia story (8 outlets). Pensions, savings, debt: not trending, but this is your actual future.",
+      "topic": "personal"
     },
     {
       "loud": {
-        "t": "Portugal joins Europe's top 10 for tech investment after Tekever's funding round",
+        "t": "South Korea and China agree wider trade deal covering entertainment",
         "src": "Euronews Business",
-        "u": "https://www.euronews.com/2026/11/23/portugal-joins-europes-top-10-for-tech-investment-on-back-of-tekever-funding-round",
+        "u": "https://www.euronews.com/2026/11/23/south-korea-and-china-agree-wider-trade-deal-covering-entertainment",
         "n": 3,
-        "term": "Tech"
+        "term": "Trade"
       },
       "quiet": {
         "t": "Why is Bangladesh’s Grameen Bank under attack?",
         "src": "Al Jazeera",
         "u": "https://www.aljazeera.com/news/2026/11/23/why-is-bangladeshs-grameen-bank-under-attack?traffic_source=rss"
       },
-      "why": "Tech is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Tech story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "why": "Trade is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Trade story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
       "topic": "banking"
     },
     {
