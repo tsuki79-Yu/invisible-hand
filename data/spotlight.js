@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-24T03:34:01.171Z",
+  "updated": "2026-11-24T04:06:06.034Z",
   "week": "24 November 2026",
   "picks": [
     {
