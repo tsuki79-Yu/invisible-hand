@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-24T07:24:52.277Z",
+  "updated": "2026-11-24T10:16:46.852Z",
   "week": "24 November 2026",
   "picks": [
     {
@@ -14,7 +14,7 @@ window.IH_SPOTLIGHT = {
         "term": "Nvidia"
       },
       "quiet": {
-        "t": "Britain's landlords are getting bigger. A two-tier rental market may follow",
+        "t": "Why the rise of the corporate landlord could lead to a two-tier rental market",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/c6n90g2l82d1o?at_medium=RSS&at_campaign=rss"
       },
@@ -24,37 +24,37 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "South Korea and China agree wider trade deal covering entertainment",
-        "src": "Euronews Business",
-        "u": "https://www.euronews.com/2026/11/23/south-korea-and-china-agree-wider-trade-deal-covering-entertainment",
+        "t": "A slash-and-burn budget update could push Australia into a recession. Jim Chalmers has a fine line to tread | Patrick Commins",
+        "src": "The Guardian",
+        "u": "https://www.theguardian.com/business/2026/nov/24/mid-year-budget-cuts-recession-inflation-unemployment-australia-jim-chalmers",
         "n": 3,
-        "term": "Trade"
+        "term": "Australia"
       },
       "quiet": {
         "t": "Why is Bangladesh’s Grameen Bank under attack?",
         "src": "Al Jazeera",
         "u": "https://www.aljazeera.com/news/2026/11/23/why-is-bangladeshs-grameen-bank-under-attack?traffic_source=rss"
       },
-      "why": "Trade is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Trade story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "why": "Australia is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Australia story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
       "topic": "banking"
     },
     {
       "loud": {
-        "t": "S&P improves Uzbekistan’s credit rating to BB+ — one step away from investment grade",
-        "src": "Gazeta.uz",
-        "u": "https://www.gazeta.uz/en/2026/11/21/sp-global-ratings/",
-        "n": 5,
+        "t": "India remains Uzbekistan’s largest beef supplier with 55,900 tons",
+        "src": "Kun.uz",
+        "u": "https://kun.uz/en/news/2026/11/24/india-remains-uzbekistans-largest-beef-supplier-with-55900-tons-62042",
+        "n": 4,
         "term": "Uzbekistans"
       },
       "quiet": {
-        "t": "OYAK CEO names three reasons to invest in Uzbekistan",
-        "src": "UzA",
-        "u": "https://uza.uz/en/posts/oyak-ceo-names-three-reasons-to-invest-in-uzbekistan_942483"
+        "t": "UzBev warns sugar import quotas could trigger shortages and price hikes in Uzbekistan",
+        "src": "Kun.uz",
+        "u": "https://kun.uz/en/news/2026/11/24/uzbev-warns-sugar-import-quotas-could-trigger-shortages-and-price-hikes-in-uzbekistan-62037"
       },
-      "why": "In Uzbekistan and Central Asia, Uzbekistans is the story most outlets are running (5 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
-      "whyGz": "Back home, everyone's covering Uzbekistans. This is the long game: investment and reforms decide how rich a country gets over decades.",
-      "topic": "growth"
+      "why": "In Uzbekistan and Central Asia, Uzbekistans is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
+      "whyGz": "Back home, everyone's covering Uzbekistans. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
+      "topic": "trade"
     }
   ]
 };
