@@ -2,15 +2,15 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-23T21:57:54.192Z",
-  "week": "23 November 2026",
+  "updated": "2026-11-24T01:16:23.106Z",
+  "week": "24 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "Nvidia value climbs by almost $1tn and tech stocks rally after Jensen Huang returns",
+        "t": "Nvidia reinstates CEO Jensen Huang after affair with alleged spy as Trump says 'I made the deal'",
         "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/cq62pn6j42jko?at_medium=RSS&at_campaign=rss",
-        "n": 6,
+        "u": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
+        "n": 8,
         "term": "Jensen"
       },
       "quiet": {
@@ -18,26 +18,26 @@ window.IH_SPOTLIGHT = {
         "src": "Al Jazeera",
         "u": "https://www.aljazeera.com/news/2026/11/23/why-is-bangladeshs-grameen-bank-under-attack?traffic_source=rss"
       },
-      "why": "Jensen is all over the news today (6 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Jensen story (6 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "why": "Jensen is all over the news today (8 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Jensen story (8 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
       "topic": "banking"
     },
     {
       "loud": {
-        "t": "South Korea and China agree wider trade deal covering entertainment",
+        "t": "Portugal joins Europe's top 10 for tech investment after Tekever's funding round",
         "src": "Euronews Business",
-        "u": "https://www.euronews.com/2026/11/23/south-korea-and-china-agree-wider-trade-deal-covering-entertainment",
+        "u": "https://www.euronews.com/2026/11/23/portugal-joins-europes-top-10-for-tech-investment-on-back-of-tekever-funding-round",
         "n": 3,
-        "term": "China"
+        "term": "Tech"
       },
       "quiet": {
-        "t": "Jim Chalmers says he doesn't expect a recession, but 'things might get a bit harder'",
-        "src": "ABC News Business",
-        "u": "https://www.abc.net.au/news/2026-11-23/chalmers-flags-net-spending-cuts-in-mid-year-budget/107417628"
+        "t": "Capita shares plunge 70% as boss quits after civil service pensions failure",
+        "src": "BBC Business",
+        "u": "https://www.bbc.co.uk/news/articles/c65y1qqw3kjxo?at_medium=RSS&at_campaign=rss"
       },
-      "why": "China is all over the news today (3 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
-      "whyGz": "Everyone's on the China story (3 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
-      "topic": "gdp"
+      "why": "Tech is all over the news today (3 outlets). Pensions, savings and household debt decide people's financial security. They rarely trend, but they matter.",
+      "whyGz": "Everyone's on the Tech story (3 outlets). Pensions, savings, debt: not trending, but this is your actual future.",
+      "topic": "personal"
     },
     {
       "loud": {
