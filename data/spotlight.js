@@ -2,14 +2,14 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-24T16:19:07.521Z",
+  "updated": "2026-11-24T19:05:39.625Z",
   "week": "24 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang",
+        "t": "US attorney general dodges questions about Nvidia investigation",
         "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
+        "u": "https://www.bbc.co.uk/news/articles/crpdw1qx7jgxo?at_medium=RSS&at_campaign=rss",
         "n": 8,
         "term": "Nvidia"
       },
@@ -24,19 +24,19 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "Portugal joins Europe's top 10 for tech investment after Tekever's funding round",
-        "src": "Euronews Business",
-        "u": "https://www.euronews.com/2026/11/23/portugal-joins-europes-top-10-for-tech-investment-on-back-of-tekever-funding-round",
-        "n": 4,
-        "term": "Tech"
+        "t": "Faisal Islam: Why Jensen Huang proved too big to fire",
+        "src": "BBC Business",
+        "u": "https://www.bbc.co.uk/news/articles/ckr5g8edl94eo?at_medium=RSS&at_campaign=rss",
+        "n": 7,
+        "term": "Jensen"
       },
       "quiet": {
         "t": "Consumer confidence shoots up after Democrats' midterm victories — though inflation worries persist",
         "src": "CNBC",
         "u": "https://www.cnbc.com/2026/11/24/consumer-confidence-november-election-midterm.html"
       },
-      "why": "Tech is all over the news today (4 outlets). Inflation decides how far every paycheque stretches and what the central bank does next. It shapes daily life long after the buzz around today's top story fades.",
-      "whyGz": "Everyone's on the Tech story (4 outlets). Inflation = how far your money goes. It hits everyone's wallet, so it matters way longer than today's drama.",
+      "why": "Jensen is all over the news today (7 outlets). Inflation decides how far every paycheque stretches and what the central bank does next. It shapes daily life long after the buzz around today's top story fades.",
+      "whyGz": "Everyone's on the Jensen story (7 outlets). Inflation = how far your money goes. It hits everyone's wallet, so it matters way longer than today's drama.",
       "topic": "inflation"
     },
     {
