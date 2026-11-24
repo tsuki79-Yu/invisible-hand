@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-24T19:05:39.625Z",
+  "updated": "2026-11-24T22:03:59.847Z",
   "week": "24 November 2026",
   "picks": [
     {
@@ -45,15 +45,15 @@ window.IH_SPOTLIGHT = {
         "src": "Gazeta.uz",
         "u": "https://www.gazeta.uz/en/2026/11/24/jordan-talks/",
         "n": 4,
-        "term": "Jordan"
+        "term": "Partnership"
       },
       "quiet": {
         "t": "UzBev warns sugar import quotas could trigger shortages and price hikes in Uzbekistan",
         "src": "Kun.uz",
         "u": "https://kun.uz/en/news/2026/11/24/uzbev-warns-sugar-import-quotas-could-trigger-shortages-and-price-hikes-in-uzbekistan-62037"
       },
-      "why": "In Uzbekistan and Central Asia, Jordan is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
-      "whyGz": "Back home, everyone's covering Jordan. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
+      "why": "In Uzbekistan and Central Asia, Partnership is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
+      "whyGz": "Back home, everyone's covering Partnership. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
       "topic": "trade"
     }
   ]
