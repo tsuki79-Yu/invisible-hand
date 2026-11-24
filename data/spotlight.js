@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-24T10:16:46.852Z",
+  "updated": "2026-11-24T13:23:25.154Z",
   "week": "24 November 2026",
   "picks": [
     {
@@ -14,7 +14,7 @@ window.IH_SPOTLIGHT = {
         "term": "Nvidia"
       },
       "quiet": {
-        "t": "Why the rise of the corporate landlord could lead to a two-tier rental market",
+        "t": "The shake-up facing renters as a new kind of landlord emerges",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/c6n90g2l82d1o?at_medium=RSS&at_campaign=rss"
       },
@@ -24,19 +24,19 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "A slash-and-burn budget update could push Australia into a recession. Jim Chalmers has a fine line to tread | Patrick Commins",
-        "src": "The Guardian",
-        "u": "https://www.theguardian.com/business/2026/nov/24/mid-year-budget-cuts-recession-inflation-unemployment-australia-jim-chalmers",
-        "n": 3,
-        "term": "Australia"
+        "t": "Nvidia's position as cornerstone of AI trade confirmed by market reaction to Huang's return",
+        "src": "France 24 Business",
+        "u": "https://www.france24.com/en/tv-shows/business/20261124-nvidia-s-position-as-cornerstone-of-ai-trade-confirmed-by-market-reaction-to-huang-s-return",
+        "n": 4,
+        "term": "Huangs"
       },
       "quiet": {
         "t": "Why is Bangladesh’s Grameen Bank under attack?",
         "src": "Al Jazeera",
         "u": "https://www.aljazeera.com/news/2026/11/23/why-is-bangladeshs-grameen-bank-under-attack?traffic_source=rss"
       },
-      "why": "Australia is all over the news today (3 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Everyone's on the Australia story (3 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
+      "why": "Huangs is all over the news today (4 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
+      "whyGz": "Everyone's on the Huangs story (4 outlets). Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
       "topic": "banking"
     },
     {
