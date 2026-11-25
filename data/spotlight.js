@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-25T18:59:22.616Z",
+  "updated": "2026-11-25T22:02:00.784Z",
   "week": "25 November 2026",
   "picks": [
     {
@@ -24,20 +24,20 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "Peterson: Here’s what Bessent’s about-face on Jensen Huang reveals about Trump and China",
-        "src": "CNBC",
-        "u": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-trump-bessent-china.html",
-        "n": 6,
+        "t": "Migrant wrongly deported by Trump leaves US for Spain",
+        "src": "Al Jazeera",
+        "u": "https://www.aljazeera.com/video/newsfeed/2026/11/25/migrant-wrongly-deported-by-trump-leaves-us-for-spain?traffic_source=rss",
+        "n": 5,
         "term": "Trump"
       },
       "quiet": {
-        "t": "Regulators implement growth-friendly securitisation reforms",
-        "src": "Bank of England",
-        "u": "https://www.bankofengland.co.uk/news/2026/november/regulators-implement-growth-friendly-securitisation-reforms"
+        "t": "The shake-up facing renters as a new kind of landlord emerges",
+        "src": "BBC Business",
+        "u": "https://www.bbc.co.uk/news/articles/c6n90g2l82d1o?at_medium=RSS&at_campaign=rss"
       },
-      "why": "Trump is all over the news today (6 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
-      "whyGz": "Everyone's on the Trump story (6 outlets). This is the long game: investment and reforms decide how rich a country gets over decades.",
-      "topic": "growth"
+      "why": "Trump is all over the news today (5 outlets). Pensions, savings and household debt decide people's financial security. They rarely trend, but they matter.",
+      "whyGz": "Everyone's on the Trump story (5 outlets). Pensions, savings, debt: not trending, but this is your actual future.",
+      "topic": "personal"
     },
     {
       "loud": {
