@@ -2,19 +2,19 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-25T03:38:46.700Z",
+  "updated": "2026-11-25T04:13:12.524Z",
   "week": "25 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "Trump's Nvidia intervention ties his political fortunes to the AI boom",
+        "t": "US attorney general dodges questions about Nvidia investigation",
         "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/ckj05m2zdyryo?at_medium=RSS&at_campaign=rss",
+        "u": "https://www.bbc.co.uk/news/articles/crpdw1qx7jgxo?at_medium=RSS&at_campaign=rss",
         "n": 8,
         "term": "Nvidia"
       },
       "quiet": {
-        "t": "US preparing to unveil new tariffs on global trading partners",
+        "t": "US preparing to unveil plan for new tariffs on global trading partners",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss"
       },
@@ -28,15 +28,15 @@ window.IH_SPOTLIGHT = {
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/ckr5g8edl94eo?at_medium=RSS&at_campaign=rss",
         "n": 8,
-        "term": "Jensen"
+        "term": "Huang"
       },
       "quiet": {
         "t": "'I only use the washing machine on a Sunday' - how we're keeping our energy bills down",
         "src": "BBC Business",
         "u": "https://www.bbc.co.uk/news/articles/c820qnznkrn4o?at_medium=RSS&at_campaign=rss"
       },
-      "why": "Jensen is all over the news today (8 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
-      "whyGz": "Everyone's on the Jensen story (8 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
+      "why": "Huang is all over the news today (8 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
+      "whyGz": "Everyone's on the Huang story (8 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
       "topic": "market-failures"
     },
     {
