@@ -2,58 +2,58 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-25T13:28:35.282Z",
+  "updated": "2026-11-25T16:17:48.247Z",
   "week": "25 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "Zoe Kleinman: Nobody is irreplaceable - unless you're Jensen Huang",
+        "t": "US attorney general dodges questions about Nvidia investigation",
         "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/c3rrgqj2zx5yo?at_medium=RSS&at_campaign=rss",
-        "n": 8,
-        "term": "Jensen"
+        "u": "https://www.bbc.co.uk/news/articles/crpdw1qx7jgxo?at_medium=RSS&at_campaign=rss",
+        "n": 7,
+        "term": "Nvidia"
       },
       "quiet": {
         "t": "Regulators implement growth-friendly securitisation reforms",
         "src": "Bank of England",
         "u": "https://www.bankofengland.co.uk/news/2026/november/regulators-implement-growth-friendly-securitisation-reforms"
       },
-      "why": "Jensen is all over the news today (8 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
-      "whyGz": "Everyone's on the Jensen story (8 outlets). This is the long game: investment and reforms decide how rich a country gets over decades.",
+      "why": "Nvidia is all over the news today (7 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
+      "whyGz": "Everyone's on the Nvidia story (7 outlets). This is the long game: investment and reforms decide how rich a country gets over decades.",
       "topic": "growth"
     },
     {
       "loud": {
-        "t": "US attorney general dodges questions about Nvidia investigation",
-        "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/crpdw1qx7jgxo?at_medium=RSS&at_campaign=rss",
-        "n": 8,
-        "term": "Nvidia"
+        "t": "Peterson: Here’s what Bessent’s about-face on Jensen Huang reveals about Trump and China",
+        "src": "CNBC",
+        "u": "https://www.cnbc.com/2026/11/23/nvidia-jensen-huang-trump-bessent-china.html",
+        "n": 6,
+        "term": "Trump"
       },
       "quiet": {
-        "t": "Mortgage delinquency rate up 31% in third quarter: Equifax report",
-        "src": "CBC Business",
-        "u": "https://www.cbc.ca/news/business/mortgage-delinquency-9.7433747?cmp=rss"
+        "t": "El Niño and climate change double act prompts early coral bleaching warning",
+        "src": "ABC News Business",
+        "u": "https://www.abc.net.au/news/2026-11-25/scientists-issue-great-barrier-reef-coral-bleaching-warning/107412866"
       },
-      "why": "Nvidia is all over the news today (8 outlets). Pensions, savings and household debt decide people's financial security. They rarely trend, but they matter.",
-      "whyGz": "Everyone's on the Nvidia story (8 outlets). Pensions, savings, debt: not trending, but this is your actual future.",
-      "topic": "personal"
+      "why": "Trump is all over the news today (6 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
+      "whyGz": "Everyone's on the Trump story (6 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
+      "topic": "market-failures"
     },
     {
       "loud": {
-        "t": "Uzbekistan, Jordan sign 19 agreements covering trade, energy and mining",
+        "t": "Eurasian Development Bank eyes $500 million investment in Uzbekistan next year",
         "src": "Kun.uz",
-        "u": "https://kun.uz/en/news/2026/11/24/uzbekistan-jordan-sign-19-agreements-covering-trade-energy-and-mining-62108",
+        "u": "https://kun.uz/en/news/2026/11/25/eurasian-development-bank-eyes-500-million-investment-in-uzbekistan-next-year-62228",
         "n": 4,
-        "term": "Trade"
+        "term": "Investment"
       },
       "quiet": {
         "t": "Kazakhstan Looks for New Coal Export Routes as Russian Rail Transit Stalls",
         "src": "Times of Central Asia",
         "u": "https://timesca.com/kazakhstan-looks-for-new-coal-export-routes-as-russian-rail-transit-stalls/"
       },
-      "why": "In Uzbekistan and Central Asia, Trade is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
-      "whyGz": "Back home, everyone's covering Trade. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
+      "why": "In Uzbekistan and Central Asia, Investment is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
+      "whyGz": "Back home, everyone's covering Investment. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
       "topic": "trade"
     }
   ]
