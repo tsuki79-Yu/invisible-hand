@@ -2,42 +2,42 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-24T22:03:59.847Z",
-  "week": "24 November 2026",
+  "updated": "2026-11-25T01:22:45.192Z",
+  "week": "25 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "US attorney general dodges questions about Nvidia investigation",
+        "t": "Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang",
         "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/crpdw1qx7jgxo?at_medium=RSS&at_campaign=rss",
+        "u": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
         "n": 8,
-        "term": "Nvidia"
-      },
-      "quiet": {
-        "t": "Mortgage delinquency rate up 31% in third quarter: Equifax report",
-        "src": "CBC Business",
-        "u": "https://www.cbc.ca/news/business/mortgage-delinquency-9.7433747?cmp=rss"
-      },
-      "why": "Nvidia is all over the news today (8 outlets). Pensions, savings and household debt decide people's financial security. They rarely trend, but they matter.",
-      "whyGz": "Everyone's on the Nvidia story (8 outlets). Pensions, savings, debt: not trending, but this is your actual future.",
-      "topic": "personal"
-    },
-    {
-      "loud": {
-        "t": "Faisal Islam: Why Jensen Huang proved too big to fire",
-        "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/ckr5g8edl94eo?at_medium=RSS&at_campaign=rss",
-        "n": 7,
         "term": "Jensen"
       },
       "quiet": {
-        "t": "Consumer confidence shoots up after Democrats' midterm victories — though inflation worries persist",
-        "src": "CNBC",
-        "u": "https://www.cnbc.com/2026/11/24/consumer-confidence-november-election-midterm.html"
+        "t": "US preparing to unveil new tariffs on global trading partners",
+        "src": "BBC Business",
+        "u": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss"
       },
-      "why": "Jensen is all over the news today (7 outlets). Inflation decides how far every paycheque stretches and what the central bank does next. It shapes daily life long after the buzz around today's top story fades.",
-      "whyGz": "Everyone's on the Jensen story (7 outlets). Inflation = how far your money goes. It hits everyone's wallet, so it matters way longer than today's drama.",
-      "topic": "inflation"
+      "why": "Jensen is all over the news today (8 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
+      "whyGz": "Everyone's on the Jensen story (8 outlets). Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
+      "topic": "trade"
+    },
+    {
+      "loud": {
+        "t": "Huawei found guilty of stealing trade secrets but acquitted of racketeering",
+        "src": "BBC Business",
+        "u": "https://www.bbc.co.uk/news/articles/cmy49ngydqzpo?at_medium=RSS&at_campaign=rss",
+        "n": 4,
+        "term": "Trade"
+      },
+      "quiet": {
+        "t": "'I only use the washing machine on a Sunday' - how we're keeping our energy bills down",
+        "src": "BBC Business",
+        "u": "https://www.bbc.co.uk/news/articles/c820qnznkrn4o?at_medium=RSS&at_campaign=rss"
+      },
+      "why": "Trade is all over the news today (4 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
+      "whyGz": "Everyone's on the Trade story (4 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
+      "topic": "market-failures"
     },
     {
       "loud": {
