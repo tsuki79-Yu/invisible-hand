@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-25T07:28:53.556Z",
+  "updated": "2026-11-25T10:18:54.118Z",
   "week": "25 November 2026",
   "picks": [
     {
@@ -31,29 +31,29 @@ window.IH_SPOTLIGHT = {
         "term": "Huang"
       },
       "quiet": {
-        "t": "Energy bills to rise by 26% from January",
-        "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/cm20qnq33e90o?at_medium=RSS&at_campaign=rss"
+        "t": "Regulators implement growth-friendly securitisation reforms",
+        "src": "Bank of England",
+        "u": "https://www.bankofengland.co.uk/news/2026/november/regulators-implement-growth-friendly-securitisation-reforms"
       },
-      "why": "Huang is all over the news today (8 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
-      "whyGz": "Everyone's on the Huang story (8 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
-      "topic": "market-failures"
+      "why": "Huang is all over the news today (8 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
+      "whyGz": "Everyone's on the Huang story (8 outlets). This is the long game: investment and reforms decide how rich a country gets over decades.",
+      "topic": "growth"
     },
     {
       "loud": {
-        "t": "Uzbekistan, Jordan agree to elevate relations to strategic partnership",
-        "src": "Gazeta.uz",
-        "u": "https://www.gazeta.uz/en/2026/11/24/jordan-talks/",
+        "t": "Uzbekistan's average population age rises to 29.6 following census data revision",
+        "src": "Kun.uz",
+        "u": "https://kun.uz/en/news/2026/11/25/uzbekistans-average-population-age-rises-to-296-following-census-data-revision-62206",
         "n": 4,
-        "term": "Jordan"
+        "term": "Uzbekistans"
       },
       "quiet": {
         "t": "UzBev warns sugar import quotas could trigger shortages and price hikes in Uzbekistan",
         "src": "Kun.uz",
         "u": "https://kun.uz/en/news/2026/11/24/uzbev-warns-sugar-import-quotas-could-trigger-shortages-and-price-hikes-in-uzbekistan-62037"
       },
-      "why": "In Uzbekistan and Central Asia, Jordan is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
-      "whyGz": "Back home, everyone's covering Jordan. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
+      "why": "In Uzbekistan and Central Asia, Uzbekistans is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
+      "whyGz": "Back home, everyone's covering Uzbekistans. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
       "topic": "trade"
     }
   ]
