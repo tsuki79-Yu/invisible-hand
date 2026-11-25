@@ -2,25 +2,25 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-25T16:17:48.247Z",
+  "updated": "2026-11-25T18:59:22.616Z",
   "week": "25 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "US attorney general dodges questions about Nvidia investigation",
+        "t": "Trump's accounts traded Nvidia shares 44 times this year, records show",
         "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/crpdw1qx7jgxo?at_medium=RSS&at_campaign=rss",
+        "u": "https://www.bbc.co.uk/news/articles/cq772vk664yvo?at_medium=RSS&at_campaign=rss",
         "n": 7,
         "term": "Nvidia"
       },
       "quiet": {
-        "t": "Regulators implement growth-friendly securitisation reforms",
-        "src": "Bank of England",
-        "u": "https://www.bankofengland.co.uk/news/2026/november/regulators-implement-growth-friendly-securitisation-reforms"
+        "t": "ECB and Sveriges Riksbank conclude agreement for Sweden to join T2",
+        "src": "European Central Bank",
+        "u": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261125_1~6333a90f3a.en.html"
       },
-      "why": "Nvidia is all over the news today (7 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
-      "whyGz": "Everyone's on the Nvidia story (7 outlets). This is the long game: investment and reforms decide how rich a country gets over decades.",
-      "topic": "growth"
+      "why": "Nvidia is all over the news today (7 outlets). Interest rate decisions change the cost of every loan, mortgage and savings account. They move economies slowly, but for years.",
+      "whyGz": "Everyone's on the Nvidia story (7 outlets). Rates decide what your loans cost and what your savings earn. Slow burn, huge impact.",
+      "topic": "central-banks"
     },
     {
       "loud": {
@@ -31,13 +31,13 @@ window.IH_SPOTLIGHT = {
         "term": "Trump"
       },
       "quiet": {
-        "t": "El Niño and climate change double act prompts early coral bleaching warning",
-        "src": "ABC News Business",
-        "u": "https://www.abc.net.au/news/2026-11-25/scientists-issue-great-barrier-reef-coral-bleaching-warning/107412866"
+        "t": "Regulators implement growth-friendly securitisation reforms",
+        "src": "Bank of England",
+        "u": "https://www.bankofengland.co.uk/news/2026/november/regulators-implement-growth-friendly-securitisation-reforms"
       },
-      "why": "Trump is all over the news today (6 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
-      "whyGz": "Everyone's on the Trump story (6 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
-      "topic": "market-failures"
+      "why": "Trump is all over the news today (6 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
+      "whyGz": "Everyone's on the Trump story (6 outlets). This is the long game: investment and reforms decide how rich a country gets over decades.",
+      "topic": "growth"
     },
     {
       "loud": {
