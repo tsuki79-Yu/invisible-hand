@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-26T10:18:20.316Z",
+  "updated": "2026-11-26T13:28:33.943Z",
   "week": "26 November 2026",
   "picks": [
     {
@@ -41,19 +41,19 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "Census reveals ethnic and linguistic composition of Uzbekistan's population",
+        "t": "Uzbekistan, Jordan sign 19 agreements covering trade, energy and mining",
         "src": "Kun.uz",
-        "u": "https://kun.uz/en/news/2026/11/26/census-reveals-ethnic-and-linguistic-composition-of-uzbekistans-population-62373",
+        "u": "https://kun.uz/en/news/2026/11/24/uzbekistan-jordan-sign-19-agreements-covering-trade-energy-and-mining-62108",
         "n": 4,
-        "term": "Uzbekistans"
+        "term": "Trade"
       },
       "quiet": {
-        "t": "Kazakhstan Looks for New Coal Export Routes as Russian Rail Transit Stalls",
-        "src": "Times of Central Asia",
-        "u": "https://timesca.com/kazakhstan-looks-for-new-coal-export-routes-as-russian-rail-transit-stalls/"
+        "t": "Tashkent railway plant exports first batch of new railcars to Russia",
+        "src": "Kun.uz",
+        "u": "https://kun.uz/en/news/2026/11/26/tashkent-railway-plant-exports-first-batch-of-new-railcars-to-russia-62391"
       },
-      "why": "In Uzbekistan and Central Asia, Uzbekistans is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
-      "whyGz": "Back home, everyone's covering Uzbekistans. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
+      "why": "In Uzbekistan and Central Asia, Trade is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
+      "whyGz": "Back home, everyone's covering Trade. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
       "topic": "trade"
     }
   ]
