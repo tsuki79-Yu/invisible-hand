@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-26T16:12:52.275Z",
+  "updated": "2026-11-26T19:05:55.370Z",
   "week": "26 November 2026",
   "picks": [
     {
@@ -24,20 +24,20 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "UK food inflation could hit 5% next year, Bank of England says",
-        "src": "The Guardian",
-        "u": "https://www.theguardian.com/business/2026/nov/25/uk-food-inflation-sharp-rise-next-year-mounting-cost-pressures-bank-of-england",
-        "n": 5,
-        "term": "Inflation"
+        "t": "Musk's plan to send a million SpaceX data satellites into space approved",
+        "src": "BBC Business",
+        "u": "https://www.bbc.co.uk/news/articles/cwp836l8n1jgo?at_medium=RSS&at_campaign=rss",
+        "n": 4,
+        "term": "Data"
       },
       "quiet": {
-        "t": "Eurozone leaders back Hernández de Cos to succeed Lagarde at ECB",
+        "t": "Argentina enters technical recession despite Milei's economic reforms",
         "src": "Euronews Business",
-        "u": "https://www.euronews.com/2026/11/26/eurozone-leaders-back-hernandez-de-cos-to-succeed-lagarde-at-ecb"
+        "u": "https://www.euronews.com/2026/11/26/argentina-enters-technical-recession-despite-mileis-economic-reforms"
       },
-      "why": "Inflation is all over the news today (5 outlets). Interest rate decisions change the cost of every loan, mortgage and savings account. They move economies slowly, but for years.",
-      "whyGz": "Everyone's on the Inflation story (5 outlets). Rates decide what your loans cost and what your savings earn. Slow burn, huge impact.",
-      "topic": "central-banks"
+      "why": "Data is all over the news today (4 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
+      "whyGz": "Everyone's on the Data story (4 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
+      "topic": "gdp"
     },
     {
       "loud": {
