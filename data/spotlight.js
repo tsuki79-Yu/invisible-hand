@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-26T01:23:29.899Z",
+  "updated": "2026-11-26T03:37:10.102Z",
   "week": "26 November 2026",
   "picks": [
     {
@@ -31,13 +31,13 @@ window.IH_SPOTLIGHT = {
         "term": "Inflation"
       },
       "quiet": {
-        "t": "ECB and Sveriges Riksbank conclude agreement for Sweden to join T2",
-        "src": "European Central Bank",
-        "u": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261125_1~6333a90f3a.en.html"
+        "t": "Emissions fall, but not fast enough to meet climate target",
+        "src": "ABC News Business",
+        "u": "https://www.abc.net.au/news/2026-11-26/australia-emissions-fall-short-2035-climate-target/107418552"
       },
-      "why": "Inflation is all over the news today (5 outlets). Interest rate decisions change the cost of every loan, mortgage and savings account. They move economies slowly, but for years.",
-      "whyGz": "Everyone's on the Inflation story (5 outlets). Rates decide what your loans cost and what your savings earn. Slow burn, huge impact.",
-      "topic": "central-banks"
+      "why": "Inflation is all over the news today (5 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
+      "whyGz": "Everyone's on the Inflation story (5 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
+      "topic": "market-failures"
     },
     {
       "loud": {
