@@ -2,42 +2,42 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-26T19:05:55.370Z",
+  "updated": "2026-11-26T22:00:48.425Z",
   "week": "26 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "US announces new tariffs on host of countries including China",
+        "t": "Faisal Islam: Why Trump's new tariffs are less of a threat",
         "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/c893r9ke5p97o?at_medium=RSS&at_campaign=rss",
+        "u": "https://www.bbc.co.uk/news/articles/c6r7g4e3yep1o?at_medium=RSS&at_campaign=rss",
         "n": 5,
         "term": "Tariffs"
+      },
+      "quiet": {
+        "t": "Ford, Unifor call on Ottawa to exempt Canadian automakers from exhaust pollution penalties",
+        "src": "CBC Business",
+        "u": "https://www.cbc.ca/news/canada/toronto/doug-ford-unifor-exhaust-penalties-ottawa-9.7437680?cmp=rss"
+      },
+      "why": "Tariffs is all over the news today (5 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
+      "whyGz": "Everyone's on the Tariffs story (5 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
+      "topic": "market-failures"
+    },
+    {
+      "loud": {
+        "t": "Spain’s Pablo Hernández de Cos wins race to be next ECB president",
+        "src": "The Guardian",
+        "u": "https://www.theguardian.com/business/2026/nov/26/spain-pablo-hernandez-de-cos-next-ecb-president",
+        "n": 4,
+        "term": "Spains"
       },
       "quiet": {
         "t": "Liesman: Why Greenspan could bet on productivity — and Warsh needs to hike",
         "src": "CNBC",
         "u": "https://www.cnbc.com/2026/11/25/kevin-warsh-greenspan-fed-rates-ai-inflation.html"
       },
-      "why": "Tariffs is all over the news today (5 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
-      "whyGz": "Everyone's on the Tariffs story (5 outlets). This is the long game: investment and reforms decide how rich a country gets over decades.",
+      "why": "Spains is all over the news today (4 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
+      "whyGz": "Everyone's on the Spains story (4 outlets). This is the long game: investment and reforms decide how rich a country gets over decades.",
       "topic": "growth"
-    },
-    {
-      "loud": {
-        "t": "Musk's plan to send a million SpaceX data satellites into space approved",
-        "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/cwp836l8n1jgo?at_medium=RSS&at_campaign=rss",
-        "n": 4,
-        "term": "Data"
-      },
-      "quiet": {
-        "t": "Argentina enters technical recession despite Milei's economic reforms",
-        "src": "Euronews Business",
-        "u": "https://www.euronews.com/2026/11/26/argentina-enters-technical-recession-despite-mileis-economic-reforms"
-      },
-      "why": "Data is all over the news today (4 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
-      "whyGz": "Everyone's on the Data story (4 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
-      "topic": "gdp"
     },
     {
       "loud": {
