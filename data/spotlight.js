@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-26T04:08:32.144Z",
+  "updated": "2026-11-26T07:27:12.104Z",
   "week": "26 November 2026",
   "picks": [
     {
@@ -27,23 +27,23 @@ window.IH_SPOTLIGHT = {
         "t": "UK food inflation could hit 5% next year, Bank of England says",
         "src": "The Guardian",
         "u": "https://www.theguardian.com/business/2026/nov/25/uk-food-inflation-sharp-rise-next-year-mounting-cost-pressures-bank-of-england",
-        "n": 5,
-        "term": "Inflation"
+        "n": 6,
+        "term": "Bank"
       },
       "quiet": {
-        "t": "Emissions fall, but not fast enough to meet climate target",
-        "src": "ABC News Business",
-        "u": "https://www.abc.net.au/news/2026-11-26/australia-emissions-fall-short-2035-climate-target/107418552"
+        "t": "ECB and Sveriges Riksbank conclude agreement for Sweden to join T2",
+        "src": "European Central Bank",
+        "u": "https://www.ecb.europa.eu//press/pr/date/2026/html/ecb.pr261125_1~6333a90f3a.en.html"
       },
-      "why": "Inflation is all over the news today (5 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
-      "whyGz": "Everyone's on the Inflation story (5 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
-      "topic": "market-failures"
+      "why": "Bank is all over the news today (6 outlets). Interest rate decisions change the cost of every loan, mortgage and savings account. They move economies slowly, but for years.",
+      "whyGz": "Everyone's on the Bank story (6 outlets). Rates decide what your loans cost and what your savings earn. Slow burn, huge impact.",
+      "topic": "central-banks"
     },
     {
       "loud": {
-        "t": "Eurasian Development Bank eyes $500 million investment in Uzbekistan next year",
+        "t": "Uzbekistan and Kazakhstan look to expand mutual supplies and joint investment projects",
         "src": "Kun.uz",
-        "u": "https://kun.uz/en/news/2026/11/25/eurasian-development-bank-eyes-500-million-investment-in-uzbekistan-next-year-62228",
+        "u": "https://kun.uz/en/news/2026/11/26/uzbekistan-and-kazakhstan-look-to-expand-mutual-supplies-and-joint-investment-projects-62335",
         "n": 4,
         "term": "Investment"
       },
