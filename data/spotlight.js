@@ -2,8 +2,8 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-26T22:00:48.425Z",
-  "week": "26 November 2026",
+  "updated": "2026-11-27T01:27:05.889Z",
+  "week": "27 November 2026",
   "picks": [
     {
       "loud": {
@@ -31,13 +31,13 @@ window.IH_SPOTLIGHT = {
         "term": "Spains"
       },
       "quiet": {
-        "t": "Liesman: Why Greenspan could bet on productivity — and Warsh needs to hike",
-        "src": "CNBC",
-        "u": "https://www.cnbc.com/2026/11/25/kevin-warsh-greenspan-fed-rates-ai-inflation.html"
+        "t": "Argentina enters technical recession as weak consumption undermines Milei's economic gains",
+        "src": "Euronews Business",
+        "u": "https://www.euronews.com/2026/11/26/argentina-enters-technical-recession-as-weak-consumption-undermines-mileis-economic-gains"
       },
-      "why": "Spains is all over the news today (4 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
-      "whyGz": "Everyone's on the Spains story (4 outlets). This is the long game: investment and reforms decide how rich a country gets over decades.",
-      "topic": "growth"
+      "why": "Spains is all over the news today (4 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
+      "whyGz": "Everyone's on the Spains story (4 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
+      "topic": "gdp"
     },
     {
       "loud": {
