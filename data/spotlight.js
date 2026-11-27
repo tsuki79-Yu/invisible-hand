@@ -2,58 +2,58 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-27T19:04:02.035Z",
+  "updated": "2026-11-27T22:01:54.719Z",
   "week": "27 November 2026",
   "picks": [
     {
       "loud": {
-        "t": "Trump alleges ‘fake’ economic figures released before US midterms but doesn’t provide evidence",
-        "src": "The Guardian",
-        "u": "https://www.theguardian.com/us-news/2026/nov/26/trump-fake-economic-figures-midterms",
-        "n": 5,
-        "term": "Trump"
+        "t": "EU-Indonesia trade deal opens new markets, but challenges remain",
+        "src": "DW Business",
+        "u": "https://www.dw.com/en/eu-indonesia-trade-deal-opens-new-markets-but-challenges-remain/a-80059568?maca=en-rss-en-bus-2091-rdf",
+        "n": 4,
+        "term": "Trade"
       },
       "quiet": {
         "t": "Ford, Unifor call on Ottawa to exempt Canadian automakers from exhaust pollution penalties",
         "src": "CBC Business",
         "u": "https://www.cbc.ca/news/canada/toronto/doug-ford-unifor-exhaust-penalties-ottawa-9.7437680?cmp=rss"
       },
-      "why": "Trump is all over the news today (5 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
-      "whyGz": "Everyone's on the Trump story (5 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
+      "why": "Trade is all over the news today (4 outlets). Energy and climate costs often land on people who aren't part of the deal. When prices leave those costs out, problems build up quietly.",
+      "whyGz": "Everyone's on the Trade story (4 outlets). Energy and climate costs hit people who never agreed to them. That's an externality, and it's a big deal.",
       "topic": "market-failures"
     },
     {
       "loud": {
-        "t": "Faisal Islam: Why Trump's new tariffs are less of a threat",
-        "src": "BBC Business",
-        "u": "https://www.bbc.co.uk/news/articles/c6r7g4e3yep1o?at_medium=RSS&at_campaign=rss",
-        "n": 5,
-        "term": "Tariffs"
+        "t": "Record spending expected on Black Friday",
+        "src": "NPR Economy",
+        "u": "https://www.npr.org/2026/11/27/nx-s1-6047460/record-spending-expected-on-black-friday",
+        "n": 4,
+        "term": "Black"
       },
       "quiet": {
-        "t": "Argentina enters technical recession as weak consumption undermines Milei's economic gains",
+        "t": "France's inflation slows to 2.9% in November as energy prices fall",
         "src": "Euronews Business",
-        "u": "https://www.euronews.com/2026/11/26/argentina-enters-technical-recession-as-weak-consumption-undermines-mileis-economic-gains"
+        "u": "https://www.euronews.com/2026/11/27/frances-inflation-slows-to-29-in-november-as-energy-prices-fall"
       },
-      "why": "Tariffs is all over the news today (5 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
-      "whyGz": "Everyone's on the Tariffs story (5 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
-      "topic": "gdp"
+      "why": "Black is all over the news today (4 outlets). Inflation decides how far every paycheque stretches and what the central bank does next. It shapes daily life long after the buzz around today's top story fades.",
+      "whyGz": "Everyone's on the Black story (4 outlets). Inflation = how far your money goes. It hits everyone's wallet, so it matters way longer than today's drama.",
+      "topic": "inflation"
     },
     {
       "loud": {
-        "t": "Uzbekistan and Kazakhstan look to expand mutual supplies and joint investment projects",
-        "src": "Kun.uz",
-        "u": "https://kun.uz/en/news/2026/11/26/uzbekistan-and-kazakhstan-look-to-expand-mutual-supplies-and-joint-investment-projects-62335",
+        "t": "World Bank allocates $800 million financial package to support Uzbekistan’s reforms",
+        "src": "Gazeta.uz",
+        "u": "https://www.gazeta.uz/en/2026/11/26/wb/",
         "n": 4,
-        "term": "Investment"
+        "term": "Bank"
       },
       "quiet": {
         "t": "Uzbekistan plans to involve private investors in building and managing roads and bridges",
         "src": "Kun.uz",
         "u": "https://kun.uz/en/news/2026/11/27/uzbekistan-plans-to-involve-private-investors-in-building-and-managing-roads-and-bridges-62583"
       },
-      "why": "In Uzbekistan and Central Asia, Investment is the story most outlets are running (4 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
-      "whyGz": "Back home, everyone's covering Investment. This is the long game: investment and reforms decide how rich a country gets over decades.",
+      "why": "In Uzbekistan and Central Asia, Bank is the story most outlets are running (4 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
+      "whyGz": "Back home, everyone's covering Bank. This is the long game: investment and reforms decide how rich a country gets over decades.",
       "topic": "growth"
     }
   ]
