@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-27T10:15:45.136Z",
+  "updated": "2026-11-27T13:23:11.786Z",
   "week": "27 November 2026",
   "picks": [
     {
@@ -24,19 +24,19 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "UK food inflation could hit 5% next year, Bank of England says",
+        "t": "Trump alleges ‘fake’ economic figures released before US midterms but doesn’t provide evidence",
         "src": "The Guardian",
-        "u": "https://www.theguardian.com/business/2026/nov/25/uk-food-inflation-sharp-rise-next-year-mounting-cost-pressures-bank-of-england",
+        "u": "https://www.theguardian.com/us-news/2026/nov/26/trump-fake-economic-figures-midterms",
         "n": 4,
-        "term": "Inflation"
+        "term": "Trump"
       },
       "quiet": {
-        "t": "Bangladesh garment workers clash with police over low wages",
-        "src": "Al Jazeera",
-        "u": "https://www.aljazeera.com/video/newsfeed/2026/11/26/bangladesh-garment-workers-clash-with-police-over-low-wages?traffic_source=rss"
+        "t": "Argentina enters technical recession as weak consumption undermines Milei's economic gains",
+        "src": "Euronews Business",
+        "u": "https://www.euronews.com/2026/11/26/argentina-enters-technical-recession-as-weak-consumption-undermines-mileis-economic-gains"
       },
-      "why": "Inflation is all over the news today (4 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
-      "whyGz": "Everyone's on the Inflation story (4 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
+      "why": "Trump is all over the news today (4 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
+      "whyGz": "Everyone's on the Trump story (4 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
       "topic": "gdp"
     },
     {
