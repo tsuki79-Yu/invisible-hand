@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-27T07:27:12.898Z",
+  "updated": "2026-11-27T10:15:45.136Z",
   "week": "27 November 2026",
   "picks": [
     {
@@ -24,36 +24,36 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "Spain’s Pablo Hernández de Cos wins race to be next ECB president",
+        "t": "UK food inflation could hit 5% next year, Bank of England says",
         "src": "The Guardian",
-        "u": "https://www.theguardian.com/business/2026/nov/26/spain-pablo-hernandez-de-cos-next-ecb-president",
+        "u": "https://www.theguardian.com/business/2026/nov/25/uk-food-inflation-sharp-rise-next-year-mounting-cost-pressures-bank-of-england",
         "n": 4,
-        "term": "Spains"
+        "term": "Inflation"
       },
       "quiet": {
-        "t": "Argentina enters technical recession as weak consumption undermines Milei's economic gains",
-        "src": "Euronews Business",
-        "u": "https://www.euronews.com/2026/11/26/argentina-enters-technical-recession-as-weak-consumption-undermines-mileis-economic-gains"
+        "t": "Bangladesh garment workers clash with police over low wages",
+        "src": "Al Jazeera",
+        "u": "https://www.aljazeera.com/video/newsfeed/2026/11/26/bangladesh-garment-workers-clash-with-police-over-low-wages?traffic_source=rss"
       },
-      "why": "Spains is all over the news today (4 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
-      "whyGz": "Everyone's on the Spains story (4 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
+      "why": "Inflation is all over the news today (4 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
+      "whyGz": "Everyone's on the Inflation story (4 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
       "topic": "gdp"
     },
     {
       "loud": {
-        "t": "Uzbekistan and Kazakhstan look to expand mutual supplies and joint investment projects",
+        "t": "Uzbekistan and South Korea target $5 billion in bilateral trade",
         "src": "Kun.uz",
-        "u": "https://kun.uz/en/news/2026/11/26/uzbekistan-and-kazakhstan-look-to-expand-mutual-supplies-and-joint-investment-projects-62335",
+        "u": "https://kun.uz/en/news/2026/11/27/uzbekistan-and-south-korea-target-5-billion-in-bilateral-trade-62528",
         "n": 4,
-        "term": "Investment"
+        "term": "Trade"
       },
       "quiet": {
-        "t": "Tashkent City Council committee approves proposed waste tariff increases for 2027",
+        "t": "Uzbekistan to exempt imported freight wagons from VAT and overhaul railway tariffs",
         "src": "Kun.uz",
-        "u": "https://kun.uz/en/news/2026/11/27/tashkent-city-council-committee-approves-proposed-waste-tariff-increases-for-2027-62494"
+        "u": "https://kun.uz/en/news/2026/11/27/uzbekistan-to-exempt-imported-freight-wagons-from-vat-and-overhaul-railway-tariffs-62530"
       },
-      "why": "In Uzbekistan and Central Asia, Investment is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
-      "whyGz": "Back home, everyone's covering Investment. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
+      "why": "In Uzbekistan and Central Asia, Trade is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
+      "whyGz": "Back home, everyone's covering Trade. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
       "topic": "trade"
     }
   ]
