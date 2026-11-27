@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-27T04:12:19.958Z",
+  "updated": "2026-11-27T07:27:12.898Z",
   "week": "27 November 2026",
   "picks": [
     {
@@ -24,37 +24,37 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "China industrial profits growth surges to a 5-month high of 20.1% in October",
-        "src": "CNBC",
-        "u": "https://www.cnbc.com/2026/11/27/china-industrial-profits-october.html",
+        "t": "Spain’s Pablo Hernández de Cos wins race to be next ECB president",
+        "src": "The Guardian",
+        "u": "https://www.theguardian.com/business/2026/nov/26/spain-pablo-hernandez-de-cos-next-ecb-president",
         "n": 4,
-        "term": "China"
+        "term": "Spains"
       },
       "quiet": {
         "t": "Argentina enters technical recession as weak consumption undermines Milei's economic gains",
         "src": "Euronews Business",
         "u": "https://www.euronews.com/2026/11/26/argentina-enters-technical-recession-as-weak-consumption-undermines-mileis-economic-gains"
       },
-      "why": "China is all over the news today (4 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
-      "whyGz": "Everyone's on the China story (4 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
+      "why": "Spains is all over the news today (4 outlets). Growth and jobs data show whether an economy is actually getting stronger. For most people that matters more than the day's loudest headline.",
+      "whyGz": "Everyone's on the Spains story (4 outlets). Growth + jobs data = is the economy actually ok? That affects way more people than the headline drama.",
       "topic": "gdp"
     },
     {
       "loud": {
-        "t": "Eurasian Development Bank eyes $500 million investment in Uzbekistan next year",
+        "t": "Uzbekistan and Kazakhstan look to expand mutual supplies and joint investment projects",
         "src": "Kun.uz",
-        "u": "https://kun.uz/en/news/2026/11/25/eurasian-development-bank-eyes-500-million-investment-in-uzbekistan-next-year-62228",
+        "u": "https://kun.uz/en/news/2026/11/26/uzbekistan-and-kazakhstan-look-to-expand-mutual-supplies-and-joint-investment-projects-62335",
         "n": 4,
-        "term": "Development"
+        "term": "Investment"
       },
       "quiet": {
-        "t": "National Bank’s plans to provide financial support to economic sectors and entrepreneurship reviewed",
-        "src": "UzA",
-        "u": "https://uza.uz/en/posts/national-banks-plans-to-provide-financial-support-to-economic-sectors-and-entrepreneurship-reviewed_945292"
+        "t": "Tashkent City Council committee approves proposed waste tariff increases for 2027",
+        "src": "Kun.uz",
+        "u": "https://kun.uz/en/news/2026/11/27/tashkent-city-council-committee-approves-proposed-waste-tariff-increases-for-2027-62494"
       },
-      "why": "In Uzbekistan and Central Asia, Development is the story most outlets are running (4 outlets). Stress in banks and credit spreads quietly to every borrower and business. Financial crises usually start with stories like this one.",
-      "whyGz": "Back home, everyone's covering Development. Bank and credit stress spreads to everyone who borrows. Crises usually start with a headline like this.",
-      "topic": "banking"
+      "why": "In Uzbekistan and Central Asia, Investment is the story most outlets are running (4 outlets). Trade and currency moves change what imports cost and which industries win or lose, often before anyone notices.",
+      "whyGz": "Back home, everyone's covering Investment. Trade and currency moves decide what your imported stuff costs. Quiet, but it adds up.",
+      "topic": "trade"
     }
   ]
 };
