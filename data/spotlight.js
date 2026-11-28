@@ -2,7 +2,7 @@
    To write the picks by hand, set mode to "editor" and update "updated": the automatic picker then waits 7 days. */
 window.IH_SPOTLIGHT = {
   "mode": "auto",
-  "updated": "2026-11-28T09:57:36.446Z",
+  "updated": "2026-11-28T13:05:40.053Z",
   "week": "28 November 2026",
   "picks": [
     {
@@ -41,19 +41,19 @@ window.IH_SPOTLIGHT = {
     },
     {
       "loud": {
-        "t": "Uzbekistan’s Consulate in Mazar-i-Sharif to become Consulate General",
+        "t": "World Bank allocates $800 million financial package to support Uzbekistan’s reforms",
         "src": "Gazeta.uz",
-        "u": "https://www.gazeta.uz/en/2026/11/28/mazar-i-sharif/",
+        "u": "https://www.gazeta.uz/en/2026/11/26/wb/",
         "n": 4,
-        "term": "Uzbekistans"
+        "term": "Bank"
       },
       "quiet": {
         "t": "Uzbekistan plans to involve private investors in building and managing roads and bridges",
         "src": "Kun.uz",
         "u": "https://kun.uz/en/news/2026/11/27/uzbekistan-plans-to-involve-private-investors-in-building-and-managing-roads-and-bridges-62583"
       },
-      "why": "In Uzbekistan and Central Asia, Uzbekistans is the story most outlets are running (4 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
-      "whyGz": "Back home, everyone's covering Uzbekistans. This is the long game: investment and reforms decide how rich a country gets over decades.",
+      "why": "In Uzbekistan and Central Asia, Bank is the story most outlets are running (4 outlets). Investment, productivity and reform decide living standards over decades, far longer than any news cycle.",
+      "whyGz": "Back home, everyone's covering Bank. This is the long game: investment and reforms decide how rich a country gets over decades.",
       "topic": "growth"
     }
   ]
